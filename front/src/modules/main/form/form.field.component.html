@@ -1,0 +1,19 @@
+﻿<td>
+	<label *ngIf="field" [for]="field.name">
+		{{field.label}}
+	</label>
+</td>
+
+<td [colSpan]="inputColSpan">
+	<input #inputBox
+		*ngIf="field"
+		[id]="field.name"
+		[name]="field.name"
+		[type]="field.htmlInputType"
+		[(ngModel)]="field.value"
+		(input)="onInput($event)"
+		(keyup.enter)="onEnter()"
+	/>
+
+	<p *ngIf="field.error" class="error" [innerHTML]="field.error"></p>
+</td>

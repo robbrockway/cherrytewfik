@@ -1,0 +1,11 @@
+﻿<image-field-error *ngIf="hasImageType; else plain"
+	[message]="message"
+	(tryAgain)="onTryAgainClick($event)"
+></image-field-error>
+
+<ng-template #plain>
+	<plain-field-error
+		[message]="message"
+		(tryAgain)="onTryAgainClick($event)"
+	></plain-field-error>
+</ng-template>

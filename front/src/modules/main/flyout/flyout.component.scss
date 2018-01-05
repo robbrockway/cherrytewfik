@@ -1,0 +1,151 @@
+﻿@import '../../../styles/imports/all';
+
+
+.flyout {
+
+	position: relative;
+
+	@include desktop {
+		margin-right: $desktop-nav-right-margin;
+	}
+
+	@include non-desktop {
+		display: inline-block;
+	}
+
+
+	#{$all-links} {
+		text-decoration: none;
+	}
+
+
+	.heading {
+
+		display: flex;
+		align-items: center;
+
+		@include desktop {
+			justify-content: flex-end;
+		}
+
+		@include non-desktop {
+			justify-content: center;
+		}
+
+		transition: color $quick-fade;
+		@include responsive-colour('color', $beige);
+
+		font-size: 18px;
+
+
+		img {
+			@include non-phone {
+				width: 70px;
+				margin-right: -10px;
+
+				transition: transform $quick-fade, opacity $quick-fade;
+				transform: scale(0.75);
+				opacity: 0.5;
+			}
+
+			@include phone {
+				display: none;
+			}
+		}
+
+
+		&:hover, &.selected {
+			@include responsive-colour('color', $light-beige);
+
+			img {
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
+
+	}
+
+
+	.boxAnchor {
+
+		z-index: 1;
+
+		@include non-desktop {
+			position: absolute;
+			left: 50%;
+			top: calc(100% + #{$non-desktop-space-below-flyout-headings});
+		}
+
+
+		.box {
+
+			@include desktop {
+				position: absolute;
+				left: calc(100% + #{$desktop-nav-right-margin});
+				bottom: -30px;
+			}
+
+			@include non-desktop {
+				margin-left: -50%;
+				margin-right: 50%;
+			}
+
+			padding: 15px;
+		
+			text-align: left;
+			font-size: 0.9em;
+
+			background: $murky-black;
+			border: $light-brown 2px solid;
+			border-radius: 3px;
+
+			transition: transform $quick-fade, opacity $quick-fade;
+			opacity: 0;
+
+			@include desktop {
+				transform: translate3d(-25px, 0px, 0px);
+			}
+
+			@include non-desktop {
+				transform: translate3d(0px, -25px, 0px);
+			}
+
+
+			&:not(.visible) {
+				pointer-events: none;
+			}
+
+
+			&.visible {
+				transform: translate3d(0, 0, 0);
+			}
+
+
+			.cross {
+				position: absolute;
+				width: 15px;
+				right: 5px;
+				top: 5px;
+
+				opacity: 0.7;
+				transition: opacity $quick-fade;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
+
+
+			::ng-deep {
+
+				input, textarea {
+					background: $ice;
+				}
+
+			}
+
+		}
+
+	}
+
+}

@@ -1,0 +1,15 @@
+﻿@import '../../../../../styles/imports/all';
+
+
+select {
+
+	background: $black;
+	color: $beige;
+	border: $faint-beige 1px solid;
+
+
+	option.default {
+		display: none;
+	}
+
+}

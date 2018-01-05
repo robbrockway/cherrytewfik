@@ -1,0 +1,11 @@
+﻿<form *ngIf="form">
+	<table>
+		<tr *ngFor="let fieldsRow of form.fields; let rowIndex = index">
+			<form-field 
+				*ngFor="let field of fieldsRow"
+				[field]="field"
+				[inputColSpan]="getInputColSpan(rowIndex)"
+			></form-field>
+		</tr>
+	</table>
+</form>

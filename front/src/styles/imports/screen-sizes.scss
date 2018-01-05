@@ -1,0 +1,89 @@
+﻿
+$max-phone-width: 676px;
+$max-tablet-width: 992px;
+
+
+@mixin phone {
+	@media (max-width: $max-phone-width) {
+		@content;
+	}
+}
+
+
+@mixin non-phone {
+	@media (min-width: $max-phone-width) {
+		@content;
+	}
+}
+
+
+@mixin tablet {
+	@media (min-width: $max-phone-width) 
+			and (max-width: $max-tablet-width) {
+		@content;
+	}
+}
+
+
+@mixin desktop {
+	@media (min-width: $max-tablet-width) {
+		@content;
+	}
+}
+
+
+@mixin non-desktop {
+	@media (max-width: $max-tablet-width) {
+		@content;
+	}
+}
+
+
+@mixin responsive-colours($declarations) {
+	@each $property-name, $base-colour in $declarations {
+		@include responsive-colour($property-name, $base-colour);
+	}
+}
+
+
+@mixin responsive-colour($property-name, $base-colour) {
+	@include non-phone {
+		#{$property-name}: $base-colour;
+	}
+
+	@include phone {
+		#{$property-name}: lighten($base-colour, 25%);
+	}
+}
+
+
+@mixin scale-for-phone(
+	$property-name,
+	$non-phone-size,
+	$phone-scale-factor
+) {
+
+	@include non-phone {
+		#{$property-name}: $non-phone-size;
+	}
+
+	@include phone {
+		#{$property-name}: $non-phone-size * $phone-scale-factor;
+	}
+}
+
+
+@mixin scale-for-non-desktop(
+	$property-name,
+	$desktop-size,
+	$non-desktop-scale-factor
+) {
+
+	@include desktop {
+		#{$property-name}: $desktop-size;
+	}
+
+	@include non-desktop {
+		#{$property-name}: $desktop-size * $non-desktop-scale-factor;
+	}
+}

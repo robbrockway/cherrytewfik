@@ -1,0 +1,11 @@
+﻿<div class="buttons">
+
+	<button *ngIf="okLabel" (click)="onOk()">
+		{{okLabel}}
+	</button>
+
+	<button *ngIf="cancelLabel" (click)="onCancel()">
+		{{cancelLabel}}
+	</button>
+
+</div>

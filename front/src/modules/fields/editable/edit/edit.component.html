@@ -1,0 +1,54 @@
+﻿<ng-container [ngSwitch]="type">
+
+	<string-edit *ngSwitchCase="'string'"
+		[label]="label"
+		[allowLinebreaks]="false"
+		[value]="value"
+		(valueChange)="onValueChange($event)"
+		(cancel)="onCancel()"
+	></string-edit>
+
+	<string-edit *ngSwitchCase="'multiline'"
+		[label]="label"
+		[allowLinebreaks]="true"
+		[value]="value"
+		(valueChange)="onValueChange($event)"
+		(cancel)="onCancel()"
+	></string-edit>
+
+	<price-edit *ngSwitchCase="'price'"
+		[label]="label"
+		[value]="value"
+		(valueChange)="onValueChange($event)"
+		(cancel)="onCancel()"
+	></price-edit>
+
+	<year-month-edit *ngSwitchCase="'yearMonth'"
+		[label]="label"
+		[value]="value"
+		(valueChange)="onValueChange($event)"
+		(cancel)="onCancel()"
+	></year-month-edit>
+
+	<image-edit *ngSwitchCase="'thumbnail'"
+		[label]="label"
+		[value]="value"
+		(valueChange)="onValueChange($event)"
+		(cancel)="onCancel()"
+	></image-edit>
+
+	<image-edit *ngSwitchCase="'image'"
+		[label]="label"
+		[value]="value"
+		(valueChange)="onValueChange($event)"
+		(cancel)="onCancel()"
+	></image-edit>
+
+	<category-link-edit *ngSwitchCase="'categoryLink'"
+		[label]="label"
+		[value]="value"
+		(valueChange)="onValueChange($event)"
+		(cancel)="onCancel()"
+	></category-link-edit>
+
+</ng-container>

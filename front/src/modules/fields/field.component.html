@@ -1,0 +1,23 @@
+﻿<editable-field
+		*ngIf="userService.isStaff; else static"
+		[object]="object"
+		[propertyName]="propertyName"
+		[type]="type"	
+		[label]="label"
+		[prefixText]="prefixText"
+		[widthList]="widthList"
+		[rootDirectory]="rootDirectory"
+		(load)="onReady()"
+	></editable-field
+><ng-template #static
+	><static-field 
+		[object]="object"
+		[propertyName]="propertyName"
+		[type]="type"
+		[label]="label"
+		[prefixText]="prefixText"
+		[widthList]="widthList"
+		[rootDirectory]="rootDirectory"
+		(load)="onReady()"
+	></static-field
+></ng-template>

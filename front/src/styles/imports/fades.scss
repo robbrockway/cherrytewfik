@@ -1,0 +1,42 @@
+﻿
+$slow-fade: 1s;
+$medium-fade: 0.5s;
+$quick-fade: 0.25s;
+
+$hardware-accelerated: 'translateZ(0)';
+
+
+@mixin fadeable($fade-in-time, $fade-out-time: '') {
+	
+	@if $fade-out-time == '' {
+		transition: opacity $fade-in-time;
+	} @else {
+		transition: opacity $fade-out-time;
+	}
+
+	opacity: 0;
+	pointer-events: none;
+
+
+	&.visible {
+		@if $fade-out-time != '' {
+			transition: opacity $fade-in-time;
+		}
+		
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+}
+
+
+@mixin fade-up-on-hover($initial-opacity: 0.75, $fade-time: $quick-fade) {
+
+	opacity: $initial-opacity;
+	transition: opacity $fade-time;
+
+	&:hover {
+		opacity: 1;
+	}
+
+}

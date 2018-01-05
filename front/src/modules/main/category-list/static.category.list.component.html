@@ -1,0 +1,8 @@
+﻿<div class="categoryList">
+
+	<static-category-list-item *ngFor="let category of objects"
+		[object]="category"
+		(load)="onItemLoad(category)"
+	></static-category-list-item>
+
+</div>

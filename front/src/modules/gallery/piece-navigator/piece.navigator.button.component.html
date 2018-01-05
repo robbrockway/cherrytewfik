@@ -1,0 +1,17 @@
+﻿
+<a *ngIf="button.enabled; else buttonDisplay"
+   href="javascript:;">
+	<ng-container *ngTemplateOutlet="buttonDisplay">
+	</ng-container>
+</a>
+
+
+<ng-template #buttonDisplay>
+
+	<div class="button"
+		 [class.disabled]="!button.enabled">
+		<img [src]="button.src" alt="" />
+		<div class="label">{{button.label}}</div>
+	</div>
+
+</ng-template>

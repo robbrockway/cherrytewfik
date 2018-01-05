@@ -1,0 +1,21 @@
+﻿<h1>
+	<field [object]="category"
+		propertyName="name"
+		type="string"
+	></field>
+</h1>
+
+<div>
+	<field [object]="category"
+		propertyName="description"
+		type="multiline"
+	></field>
+</div>
+
+<div class="list">
+	<piece-list *ngIf="category"
+		[(objects)]="category.pieces"
+		[category]="category"
+		(load)="onReady()"
+	></piece-list>
+</div>

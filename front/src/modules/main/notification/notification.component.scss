@@ -1,0 +1,19 @@
+﻿@import '../../../styles/imports/all';
+
+
+.notification {
+	background: $translucent-blue;
+	color: $white;
+
+	position: fixed;
+
+	top: -65px;
+	right: -50px;
+
+	border-radius: 50px;
+	padding: 75px 75px 15px 30px;
+
+	pointer-events: none;
+
+	@include fadeable($quick-fade, $slow-fade);
+}

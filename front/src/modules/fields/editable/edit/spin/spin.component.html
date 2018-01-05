@@ -1,0 +1,30 @@
+﻿<div class="spin">
+	<a href="javascript:;"
+		(mousedown)="onMouseDown(Direction.Up, $event)"
+		(mouseover)="onMouseOver(Direction.Up, $event)"
+		(mouseout)="onMouseOut()"
+	>
+		<img class="up" src="images/buttons/spin_up.svg" alt="+" />
+	</a>
+
+	<a *ngIf="nullable; else staticLabel" 
+		class="label"
+		[class.faint]="value === null"
+		href="javascript:;"
+		(click)="onLabelClick()"
+	>
+		{{displayedText}}
+	</a>
+
+	<ng-template #staticLabel>
+		<div class="label">{{displayedText}}</div>
+	</ng-template>
+
+	<a href="javascript:;"
+		(mousedown)="onMouseDown(Direction.Down, $event)"
+		(mouseover)="onMouseOver(Direction.Down, $event)"
+		(mouseout)="onMouseOut()"
+	>
+		<img class="down" src="images/buttons/spin_down.svg" alt="-" />
+	</a>
+</div>

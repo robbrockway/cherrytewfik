@@ -1,0 +1,29 @@
+﻿
+$bright-beige: rgb(212, 180, 128);
+$light-beige: rgb(195, 166, 116);
+$medium-beige: rgb(160, 137, 99);
+$beige: rgb(106, 90, 64);
+$faint-beige: rgba(106, 90, 64, 0.2);
+$light-brown: rgb(26, 22, 16);
+$dark-brown: rgb(12, 6, 2);
+
+$red: rgb(255, 43, 0);
+$light-blue: rgb(75, 97, 116);
+$lighter-blue: lighten($light-blue, 25%);
+
+$black: black;
+$light-grey: rgb(193, 193, 193);
+$white: white;
+
+$ice: rgba(255, 255, 255, 0.1);
+$translucent-blue: rgba(75, 97, 116, 0.8);
+$transparent-black: rgba(0, 0, 0, 0.5);
+$murky-black: rgba(0, 0, 0, 0.9);
+$foggy-black: rgba(0, 0, 0, 0.7);
+
+
+$light-shadow: -3px 2px 10px $black;
+$heavy-shadow: -6px 4px 20px $black;
+
+
+$brown-pot: url('/images/loading/brown.svg');

@@ -1,0 +1,11 @@
+﻿<editable-category-list *ngIf="userService.isStaff; else static"
+	[objects]="objects"
+	(load)="onReady()"
+></editable-category-list>
+
+<ng-template #static>
+	<static-category-list
+		[objects]="objects"
+		(load)="onReady()"
+	></static-category-list>
+</ng-template>

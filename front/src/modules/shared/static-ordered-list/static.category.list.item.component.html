@@ -1,0 +1,32 @@
+﻿<div class="listItem"
+   [class.selected]="highlighted"
+>
+
+	<a *ngIf="linkEnabled; else linkContents"
+	   [routerLink]="category.routerLink"
+	>
+		<ng-container *ngTemplateOutlet="linkContents">
+		</ng-container>
+	</a>
+
+	<ng-template #linkContents>
+
+		<image-ticker
+			[imageList]="imageList"
+			[rootDirectory]="imageParams.rootDirectory"
+			[widthList]="imageParams.widthList"
+			[turnaroundTime]="turnaroundTime"
+			(load)="onTickerLoad()"
+		></image-ticker>
+
+		<div class="shroud">
+			<div class="categoryName"
+				[class.faint]="headingShouldBeFaint"
+			>
+				{{heading}}
+			</div>
+		</div>
+
+	</ng-template>
+
+</div>

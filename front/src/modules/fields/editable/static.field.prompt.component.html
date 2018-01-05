@@ -1,0 +1,14 @@
+﻿<static-field *ngIf="shouldShowField; else noValue"
+	[object]="object"
+	[propertyName]="propertyName"
+	[type]="type"
+	[label]="label"
+	[prefixText]="prefixText"
+	[widthList]="widthList"
+	[rootDirectory]="rootDirectory"
+	(load)="onReady()"
+></static-field>
+
+<ng-template #noValue>
+	<span class="faint">Add {{label}}</span>
+</ng-template>

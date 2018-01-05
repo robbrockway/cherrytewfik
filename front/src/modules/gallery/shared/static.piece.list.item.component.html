@@ -1,0 +1,60 @@
+﻿<div #container class="pieceListItem">
+
+	<a *ngIf="linkEnabled; else linkContents"
+		[routerLink]="piece.routerLink"
+	>
+		<ng-container *ngTemplateOutlet="linkContents"></ng-container>
+	</a>
+
+	<ng-template #linkContents>
+		<thumbnail
+			[rootDirectory]="imageParams.rootDirectory"
+			[widthList]="imageParams.widthList"
+			[filename]="piece.image"
+			[alt]="piece.name"
+			(load)="onThumbnailLoad()"
+			(mouseover)="onMouseOver()"
+			(mouseout)="onMouseOut()"
+		>
+			<ng-content></ng-content>
+		</thumbnail
+	></ng-template
+	
+	
+	><div #detail
+		 *ngIf="shouldIncludeDetailBox"
+		 class="detail"
+		 [class.visible]="detailBoxParams.visible"
+		 [style.left.px]="detailBoxParams.left"
+		 [style.top.px]="detailBoxParams.top"
+		 (transitionend)="onDetailBoxTransitionEnd()"
+	>
+
+	 	<div class="topLine">
+			<div *ngIf="piece.name" class="name">
+				{{piece.name}}
+			</div>
+
+	 		<div *ngIf="piece.price"
+				 class="price"
+			>
+	 			&pound;{{piece.renderedPrice}}
+	 		</div>
+	 	</div>
+
+		<div *ngIf="piece.description" class="description">
+			<truncated-text [text]="piece.description" [maxLength]="90">
+			</truncated-text>
+		</div>
+
+		<div *ngIf="piece.date" class="date">
+			created
+			<static-year-month-field 
+				[object]="piece"
+				propertyName="date"
+			></static-year-month-field>
+		</div>
+
+	</div
+
+></div>

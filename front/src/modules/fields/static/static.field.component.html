@@ -1,0 +1,43 @@
+﻿<ng-container *ngIf="value">{{prefixText}}</ng-container
+><ng-container [ngSwitch]="type"
+	><static-string-field *ngSwitchCase="'string'"
+		[object]="object"
+		[propertyName]="propertyName"
+		(load)="onReady()"
+	></static-string-field
+	><static-string-field *ngSwitchCase="'multiline'"
+		[object]="object"
+		[propertyName]="propertyName"
+		[allowLinebreaks]="true"
+		(load)="onReady()"
+	></static-string-field
+	><static-price-field *ngSwitchCase="'price'"
+		[object]="object"
+		[propertyName]="propertyName"
+		(load)="onReady()"
+	></static-price-field
+	><static-year-month-field *ngSwitchCase="'yearMonth'"
+		[object]="object"
+		[propertyName]="propertyName"
+		(load)="onReady()"
+	></static-year-month-field
+	><static-image-field *ngSwitchCase="'image'"
+		[object]="object"
+		[propertyName]="propertyName"
+		[widthList]="widthList"
+		[rootDirectory]="rootDirectory"
+		(load)="onReady()"
+	></static-image-field
+	><static-thumbnail-field *ngSwitchCase="'thumbnail'"
+		[object]="object"
+		[propertyName]="propertyName"
+		[widthList]="widthList"
+		[rootDirectory]="rootDirectory"
+		(load)="onReady()"
+	></static-thumbnail-field
+	><static-category-link-field *ngSwitchCase="'categoryLink'"
+		[object]="object"
+		[propertyName]="propertyName"
+		(load)="onReady()"
+	></static-category-link-field
+></ng-container>

@@ -1,0 +1,6 @@
+﻿@import '../../../styles/imports/all';
+
+
+.userMenu {
+	@include scale-for-phone('min-width', 200px, 0.7);
+}

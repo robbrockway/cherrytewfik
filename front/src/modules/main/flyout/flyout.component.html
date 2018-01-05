@@ -1,0 +1,29 @@
+﻿<div class="flyout">
+
+	<a href="javascript:;" (click)="onHeadingClick($event)">
+		<div class="heading" [class.selected]="open">
+			{{title}}
+			<img [src]="icon" alt="" />
+		</div>
+	</a>
+
+	<div class="boxAnchor">
+		<div #box
+			class="box"
+			[class.visible]="open"
+			(transitionend)="onFlownInOrOut()"
+			(click)="onBoxClick($event)"
+			(blur)="closeBox()"
+		>
+			<a href="javascript:;" (click)="closeBox()">
+				<img class="cross"
+					src="images/buttons/close.svg"
+					alt="Close" 
+				/>
+			</a>
+
+			<ng-content></ng-content>
+		</div>
+	</div>
+
+</div>

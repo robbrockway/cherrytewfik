@@ -1,0 +1,15 @@
+﻿<div class="yearMonthEdit" (click)="onClickInside($event)">
+	<spin labelWhenNull="month"
+		[min]="1"
+		[max]="12"
+		[labeller]="monthLabeller"
+		[(value)]="prospectiveValue.month"
+	></spin>
+
+	<spin labelWhenNull="year"
+		[min]="1970"
+		[max]="2070"
+		[(value)]="prospectiveValue.year"
+		[defaultValue]="defaultYear"
+	></spin>
+</div>

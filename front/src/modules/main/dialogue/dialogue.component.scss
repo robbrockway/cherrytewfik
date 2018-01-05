@@ -1,0 +1,30 @@
+﻿@import '../../../styles/imports/all';
+
+
+.shroud {
+	background: $transparent-black;
+
+	position: fixed;
+
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+
+	@include dead-centre;
+	@include fadeable($medium-fade);
+
+	.dialogue {
+		background: $translucent-blue;
+		color: $white;
+	
+		padding: $dialogue-padding;
+		border-radius: $dialogue-padding;
+
+		.buttons {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+		}
+	}
+}

@@ -1,0 +1,9 @@
+﻿<static-category-list-item
+	[object]="category"
+	[reorder$]="reorder$"
+	[message]="message"
+	[linkEnabled]="!category.deleting"
+	(load)="onReady()"
+>
+	<ng-content></ng-content>
+</static-category-list-item>

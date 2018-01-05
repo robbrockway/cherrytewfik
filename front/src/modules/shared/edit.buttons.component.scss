@@ -1,0 +1,60 @@
+﻿@import '../../styles/imports/all';
+
+
+.editButtons {
+
+	position: absolute;
+
+	top: 0px;
+	z-index: 1;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+
+
+	&.inside {
+		right: 0px;
+	}
+
+
+	&.outside {
+		left: 100%;
+	}
+
+
+	&.left {
+
+		left: 0px;
+		top: 0px;
+		bottom: 0px;
+		margin: 30px;
+
+		text-align: left;
+		vertical-align: middle;
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+
+	img {
+		width: 30px;
+		height: 30px;
+		margin: 2px;
+
+		transition: transform $quick-fade, opacity $quick-fade;
+		transform: scale(0.75) #{$hardware-accelerated};
+		opacity: 0;
+	}
+
+}
+
+
+::ng-deep .buttonContainer:hover .editButtons img {
+	transform: scale(1) #{$hardware-accelerated};
+	opacity: 0.75;
+
+	&:hover {
+		opacity: 1;
+	}
+}

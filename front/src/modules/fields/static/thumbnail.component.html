@@ -1,0 +1,43 @@
+﻿<div class="wrapper buttonContainer">
+
+	<div #container
+		class="thumbnail"
+		(mouseover)="onMouseOver($event)"
+		(mouseout)="onMouseOut($event)"
+		(mousemove)="onMouseMove($event)"
+	>
+	
+		<ng-container *ngIf="filename; else placeholder">
+			<img
+				class="unzoomed"
+				[src]="unzoomedSrc"
+				[srcset]="srcset"
+				[alt]="alt"
+				(load)="onImageLoadOrError()"
+				(error)="onImageLoadOrError()"
+			/>
+
+			<img
+				class="zoomed"
+				[class.visible]="zoomed"
+				[src]="zoomedSrc"
+				[srcset]="srcset"
+				[style.transform]="transformProperty"
+				alt=""
+				(load)="onImageLoadOrError()"
+				(error)="onImageLoadOrError()"
+			/>
+		</ng-container>
+
+		<ng-template #placeholder>
+			<img src="images/placeholders/dark.svg"
+				alt="" 
+				(load)="onReady()"
+			/>
+		</ng-template>
+
+	</div>
+
+	<ng-content></ng-content>
+
+</div>

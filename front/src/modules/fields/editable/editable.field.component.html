@@ -1,0 +1,69 @@
+﻿<!-- Apologies for the odd formatting, which avoids whitespace between elements
+--><div *ngIf="shouldShowStaticField"
+			class="buttonContainer"
+			[class.thumbnail]="isThumbnail"
+			[class.noValue]="!value"
+
+	><static-field-prompt
+		[object]="object"
+		[propertyName]="propertyName"
+		[type]="type"
+		[label]="labelForSubcomponents"
+		[prefixText]="prefixText"
+		[widthList]="widthList"
+		[rootDirectory]="rootDirectory"
+		(load)="onReady()"
+	></static-field-prompt
+
+	><edit-buttons *ngIf="state === State.Static"
+		(edit)="onEditButton()"
+		(delete)="onDeleteButton()"
+		[deleteVisible]="shouldShowDeleteButton"
+		[placement]="editButtonsPlacement"
+	></edit-buttons
+
+	><ng-container *ngTemplateOutlet="nonStatic"></ng-container
+
+></div
+
+
+><ng-container *ngIf="!hasImageType"
+	><ng-container *ngTemplateOutlet="nonStatic"></ng-container
+></ng-container
+
+
+><ng-template #nonStatic
+
+	><field-error *ngIf="errorMessage; else normalView"
+		[type]="type"
+		[message]="errorMessage"
+		(tryAgain)="tryAgainAfterError()"
+		(giveUp)="giveUpAfterError()"
+	></field-error
+
+	><ng-template #normalView
+		><ng-container [ngSwitch]="state"
+			><ng-container *ngSwitchCase="State.Editing"
+				>{{prefixText}}<edit *ngSwitchCase="State.Editing"
+				[type]="type"
+				[label]="labelForSubcomponents"
+				[value]="value"
+				(valueChange)="onValueChange($event)"
+				(cancel)="onCancel()"
+				></edit
+			></ng-container
+
+			><saving-message *ngSwitchCase="State.Saving"
+				[state]="SavingState.Saving"
+				[type]="type"
+			></saving-message
+
+			><saving-message *ngSwitchCase="State.Deleting"
+				[state]="SavingState.Deleting"
+				[type]="type"
+			></saving-message
+
+		></ng-container
+	></ng-template
+
+></ng-template>

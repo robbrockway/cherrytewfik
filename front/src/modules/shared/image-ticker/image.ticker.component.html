@@ -1,0 +1,19 @@
+﻿<div class="ticker">
+
+	<ticker-image [image]="currentImagePair[0]"
+		[foreground]="!showingSecondImageInForeground"
+		[showLink]="showLinks"
+		[fadeTransition]="fadeTransition"
+		[animationDuration]="animationDuration"
+		(load)="onImageLoad()"
+	></ticker-image>
+
+	<ticker-image [image]="currentImagePair[1]"
+		[foreground]="showingSecondImageInForeground"
+		[showLink]="showLinks"
+		[fadeTransition]="fadeTransition"
+		[animationDuration]="animationDuration"
+		(load)="onImageLoad()"
+	></ticker-image>
+
+</div>

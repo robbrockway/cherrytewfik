@@ -1,0 +1,24 @@
+﻿
+
+<ng-container [ngSwitch]="animation">
+
+	<ng-container *ngSwitchCase="'fadeOut'">
+		<div *ngIf="visible" [@fadeOut] class="loadScreen">
+			<ng-container *ngTemplateOutlet="icon"></ng-container>
+		</div>
+	</ng-container>
+
+	<ng-template #icon>
+		<div class="loadIcon">
+			<div class="filling"></div>
+			<div class="pot"></div>
+		</div>
+	</ng-template>
+
+	<ng-container *ngSwitchCase="'fadeInOut'">
+		<div *ngIf="visible" [@fadeInOut] class="loadScreen">
+			<ng-container *ngTemplateOutlet="icon"></ng-container>
+		</div>
+	</ng-container>
+
+</ng-container>

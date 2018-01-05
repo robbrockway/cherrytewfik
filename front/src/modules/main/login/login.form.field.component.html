@@ -1,0 +1,19 @@
+﻿<div class="field">
+
+	<div class="label">{{field.label}}</div>
+
+	<input #inputBox
+		[id]="field.name"
+		[type]="field.htmlInputType"
+		[name]="field.name"
+		[(ngModel)]="field.value"
+		(input)="onInput($event)"
+		(keyup.enter)="onEnter()"
+	/>
+
+	<div *ngIf="field.error"
+		class="error"
+		[innerHTML]="field.error"
+	></div>
+
+</div>

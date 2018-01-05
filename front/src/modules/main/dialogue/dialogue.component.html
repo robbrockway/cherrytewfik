@@ -1,0 +1,21 @@
+﻿<div class="shroud" [class.visible]="visible">
+
+	<div class="dialogue" *ngIf="dialogue">
+
+		<h1 *ngIf="dialogue.heading">{{dialogue.heading}}</h1>
+		<p *ngIf="dialogue.message">{{dialogue.message}}</p>
+
+		<form-comp *ngIf="dialogue.form"
+			[form]="dialogue.form"
+		></form-comp>
+
+		<ok-cancel
+			[okLabel]="dialogue.buttonLabels.ok"
+			[cancelLabel]="dialogue.buttonLabels.cancel"
+			(ok)="onOk()"
+			(cancel)="onCancel()"
+		></ok-cancel>
+
+	</div>
+
+</div>

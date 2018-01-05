@@ -1,0 +1,52 @@
+﻿@import '../../../styles/imports/all';
+
+$phone-scale: $phone-piece-navigator-button-scale-factor;
+
+
+#{$all-links} {
+	color: $light-beige;
+	text-decoration: none;
+}
+
+
+::ng-deep .button {
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	text-align: center;
+
+	opacity: 0.5;
+	transition: opacity $quick-fade;
+
+
+	&.disabled {
+		color: $light-grey;
+	}
+
+
+	img {
+		@include scale-for-phone('height', 80px, $phone-scale);
+		@include scale-for-phone('margin-bottom', 20px, $phone-scale);
+
+		transform: scale(0.8);
+		transition: transform $quick-fade;
+	}
+
+}
+
+
+
+a:hover .button {
+	opacity: 1;
+
+
+	img {		
+		transform: scale(1);
+	}
+}
+
+
+

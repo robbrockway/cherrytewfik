@@ -1,0 +1,13 @@
+﻿<select #selectBox [(ngModel)]="selectedCategory" (change)="onChange()">
+
+	<option class="default"
+		[ngValue]="null"
+		selected
+		disabled
+	>{{defaultText}}</option>
+
+	<option *ngFor="let category of categories" [ngValue]="category">
+		{{category.name || defaultOptionText}}
+	</option>
+
+</select>

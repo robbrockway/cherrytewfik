@@ -1,0 +1,41 @@
+﻿@import '../../../styles/imports/all';
+
+
+.wrapper {
+
+	position: relative;
+
+	.thumbnail {
+
+		position: relative;
+
+		margin: 0;
+		padding: 0;
+
+		overflow: hidden;
+
+
+		img {
+			display: block;
+		
+			margin: 0;
+			padding: 0;
+
+			&.zoomed {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 200%;
+
+				transition: opacity $quick-fade;
+				opacity: 0;
+
+				&.visible {
+					opacity: 1;
+				}
+			}
+		}
+
+	}
+
+}

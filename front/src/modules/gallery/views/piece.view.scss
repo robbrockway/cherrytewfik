@@ -1,0 +1,74 @@
+﻿@import '../../../styles/imports/all';
+
+
+
+$image-shrinkage: 0.95;
+$phone-image-margin-counteract: -(1 - $image-shrinkage) * 50%;
+
+
+.piece {
+
+	padding-top: 40px;
+
+
+	.image {
+		
+		@include phone {
+			margin: 0px $phone-image-margin-counteract 30px;
+		}
+
+		@include non-phone {
+			float: left;
+			width: 30%;
+			margin: 0px 50px 20px 0px;
+
+			&.empty {
+				margin-top: -10px;
+			}
+		}
+
+
+		::ng-deep thumbnail img {
+			width: 100%;
+		}
+
+
+		&:not(.empty) {
+			transition: transform $quick-fade, 
+				box-shadow $quick-fade;
+
+			transform: scale($image-shrinkage);
+			box-shadow: $light-shadow;
+
+			&:hover {
+				transform: scale(1);
+				box-shadow: $heavy-shadow;
+			}
+		}
+
+	}
+
+
+	.categoryLink {
+		margin-top: 5px;
+	}
+
+
+	h1 {
+		margin-bottom: 0.5em;
+	}
+
+
+	.date {
+		font-style: italic;
+
+		display: inline-flex;
+		align-items: center;
+	}
+
+
+	.description {
+		margin-top: 40px;
+	}
+
+}

@@ -1,0 +1,53 @@
+﻿<div class="pieceList">
+
+	<div *ngFor="let piece of objectsInPresentedOrder; let first = first; let last = last;">
+
+		<editable-piece-list-item
+			[object]="piece"
+			[reorder$]="reorder$"
+			(load)="onItemLoad(piece)"
+		>
+			
+			<edit-buttons *ngIf="userService.isStaff && !piece.deleting"
+				(up)="moveUp(piece)"
+				(down)="moveDown(piece)"
+				(delete)="delete(piece)"
+				[upVisible]="!first"
+				[downVisible]="!last"
+			></edit-buttons>
+
+		</editable-piece-list-item>
+
+	</div>
+
+	<div *ngIf="addingNewObject; else linkForAddNew"
+		class="addNew"
+	>
+		<ng-container *ngTemplateOutlet="contentsForAddNew">
+		</ng-container>
+	</div>
+
+	<ng-template #contentsForAddNew>
+		<div class="plusContainer centredColumn"
+			[class.busy]="addingNewObject"
+		>
+			<img class="plus" src="images/buttons/add/beige.svg" alt="+" />
+
+			<div class="label">
+				{{addingNewObject ? 'Adding...' : 'Add piece'}}
+			</div>
+
+			<div *ngIf="addingErrorMessage" class="error">
+				{{addingErrorMessage}}
+			</div>
+		</div>
+	</ng-template>
+
+	<ng-template #linkForAddNew>
+		<a class="addNew" href="javascript:;" (click)="addNew()">
+			<ng-container *ngTemplateOutlet="contentsForAddNew">
+			</ng-container>
+		</a>
+	</ng-template>
+
+</div>

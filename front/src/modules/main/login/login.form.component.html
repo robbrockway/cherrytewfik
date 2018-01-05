@@ -1,0 +1,11 @@
+﻿<login-form-field *ngFor="let field of form.fields"
+	[field]="field"
+	(enter)="onSubmit()"
+></login-form-field>
+
+<div *ngIf="form.generalError"
+	class="error general"
+	[innerHTML]="form.generalError"
+></div>
+
+<button (click)="onSubmit()">{{buttonLabel}}</button>

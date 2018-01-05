@@ -1,0 +1,9 @@
+﻿::ng-deep .error {
+	font-size: 0.9em;
+	line-height: 1.2em;
+	margin-top: 0.5em;
+
+	&.general {
+		margin-bottom: 1em;
+	}
+}

@@ -1,0 +1,19 @@
+﻿<flyout key="login"
+	[title]="flyoutTitle"
+	icon="images/flyouts/basket.svg"
+	[(open)]="flyoutOpen"
+	(openChange)="onFlyoutOpenOrClose($event)"
+	(finishedClosing)="onFlyoutFinishedClosing()"
+>
+	<user-menu *ngIf="loggedIn; else loginForm"
+		(logout)="logout()"
+		(close)="closeFlyout()"
+	></user-menu>
+
+	<ng-template #loginForm>
+		<login-form
+			[form]="form"
+			(submit)="onSubmit()"
+		></login-form>
+	</ng-template>
+</flyout>

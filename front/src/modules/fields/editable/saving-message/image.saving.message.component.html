@@ -1,0 +1,13 @@
+﻿<div class="shroud centredColumn">
+	<ng-container [ngSwitch]="state">
+
+		<span *ngSwitchCase="SavingState.Saving">
+			Uploading...
+		</span>
+
+		<span *ngSwitchCase="SavingState.Deleting">
+			Deleting...
+		</span>
+
+	</ng-container>
+</div>

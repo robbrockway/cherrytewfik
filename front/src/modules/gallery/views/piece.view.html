@@ -1,0 +1,65 @@
+﻿<piece-navigator
+	[pieces]="piece?.category?.pieces"
+	[currentPiece]="piece"
+	(currentPieceChange)="goToPiece($event)"
+	(load)="onPieceNavigatorLoad()"
+></piece-navigator>
+
+
+<div class="piece">
+
+	<div class="image" [class.empty]="!piece?.image">
+		<field [object]="piece"
+			propertyName="image"
+			type="thumbnail"
+			[widthList]="imageParams.widthList"
+			[rootDirectory]="imageParams.rootDirectory"
+			(load)="onImageLoad()"
+		></field>
+	</div>
+
+	<div class="categoryLink">
+		<field [object]="piece"
+			propertyName="category"
+			type="categoryLink"
+		></field>
+	</div>
+
+	<h1>
+		<field [object]="piece"
+			propertyName="name"
+			type="string"
+		></field>
+	</h1>
+
+	<span class="properties"
+		*ngIf="shouldShowPropertiesBar"
+	>
+		<span class="price">
+			<field [object]="piece"
+				propertyName="price"
+				type="price"
+				prefixText="&pound;"
+			></field>
+		</span
+
+		><spacer *ngIf="shouldShowSpacer"></spacer
+
+		><span class="date">
+			<field [object]="piece"
+				propertyName="date"
+				type="yearMonth"
+				prefixText="created "
+			></field>
+		</span>
+
+	</span>
+
+	<div class="description">
+		<field [object]="piece"
+			propertyName="description"
+			type="multiline"
+		></field>
+	</div>
+
+</div>

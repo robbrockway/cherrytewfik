@@ -1,0 +1,29 @@
+﻿@import '../../../styles/imports/all';
+
+
+.ticker {
+	position: absolute;
+
+	width: 100%;
+
+
+	.outerWrapper {	
+
+		position: absolute;
+		display: block;
+
+
+		&.hidden {
+			opacity: 0;
+		}
+
+		&.foreground {
+			z-index: 1;
+		}
+
+		img {
+			width: 100%;
+		}
+
+	}
+}

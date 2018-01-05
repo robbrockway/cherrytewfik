@@ -1,0 +1,55 @@
+﻿@import '../../../styles/imports/all';
+
+
+
+@keyframes fillPot {
+
+	0% {
+		transform: translate3d(0, 50%, 0) scaleY(0);
+		opacity: 1;
+	}
+
+
+	80% {
+		transform: translate3d(0, 5%, 0) scaleY(0.8);
+		opacity: 0.2;
+	}
+
+	
+	100% {
+		transform: translate3d(0, 0%, 0) scaleY(1);
+		opacity: 0;
+	}
+
+}
+
+
+
+.loadScreen {
+
+	z-index: 1;
+
+
+	.loadIcon {
+
+		position: relative;
+
+		.pot {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+
+		.filling {
+			position: absolute;
+			top: 9%;
+			right: 9%;
+			bottom: 9%;
+			left: 9%;
+
+			animation: fillPot 1.5s linear infinite;
+		}
+
+	}
+
+}

@@ -1,0 +1,49 @@
+﻿<ng-container *ngIf="image">
+
+	<a *ngIf="showLink; else unlinkedImage"
+	   class="outerWrapper"
+	   [routerLink]="image.routerLink"
+	   [class.foreground]="foreground"
+	   [class.hidden]="!image.visible"
+	   [style.transition]="fadeTransition"
+	>
+		<ng-container *ngTemplateOutlet="inner">
+		</ng-container>
+	</a>
+
+
+	<ng-template #unlinkedImage>
+
+		<div *ngIf="image"	
+			class="outerWrapper"
+			[class.foreground]="foreground"
+			[class.hidden]="!image.visible"
+			[style.transition]="fadeTransition"
+		>
+
+			<ng-container *ngTemplateOutlet="inner">
+			</ng-container>
+
+		</div>
+
+	</ng-template>
+
+
+	<ng-template #inner>
+
+		<div class="innerWrapper">
+
+			<img *ngIf="image"
+				[class.moving]="image.moving"
+				[style.animationDuration.ms]="animationDuration"
+				[src]="image.src"
+				[srcset]="image?.srcset"
+				[alt]="image.alt || ''"
+				(load)="onReady()"
+			/>
+
+		</div>
+
+	</ng-template>
+
+</ng-container>

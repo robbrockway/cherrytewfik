@@ -1,0 +1,61 @@
+﻿@import '../../../../../styles/imports/all';
+
+
+$arrow-scale-before-hover: 0.8;
+$arrow-travel-on-hover: 5px;
+
+$vertical-margin-reduction: 30px;
+$top-margin: -$vertical-margin-reduction - 2px;
+$bottom-margin: -$vertical-margin-reduction;
+
+
+.spin {
+
+	@include dead-centre;
+	flex-direction: column;
+
+	margin: $top-margin 0px $bottom-margin;
+
+
+	a {
+		display: block;
+
+		text-decoration: none;
+		font-style: normal;
+
+		@include responsive-colour('color', $beige);
+
+		&:hover {
+			@include responsive-colour('color', $light-beige);
+		}
+	}
+
+
+	img {
+		display: block;
+
+		width: 35px;
+		height: 20px;
+
+		opacity: 0.5;
+		transition: transform $quick-fade, opacity $quick-fade;
+
+
+		&.up {
+			transform: scale($arrow-scale-before-hover) translate3d(0px, $arrow-travel-on-hover, 0px);
+		}
+
+
+		&.down {
+			transform: scale($arrow-scale-before-hover) translate3d(0px, -$arrow-travel-on-hover, 0px);
+		}
+
+
+		&:hover {
+			opacity: 1;
+			transform: none;
+		}
+
+	}
+
+}

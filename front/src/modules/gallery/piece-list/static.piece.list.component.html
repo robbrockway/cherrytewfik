@@ -1,0 +1,10 @@
+﻿<div class="pieceList">
+
+	<div *ngFor="let piece of objects"
+		><static-piece-list-item
+			[object]="piece"
+			(load)="onItemLoad(piece)"
+		></static-piece-list-item
+	></div>
+
+</div>

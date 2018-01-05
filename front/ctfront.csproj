@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{D540FAAE-3422-4C65-99B3-E07855C0843A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".angular-cli.json" />
+    <Content Include="src\modules\fields\editable\edit\types\category.link.edit.component.html" />
+    <Content Include="src\modules\fields\editable\edit\types\image.edit.component.html" />
+    <Content Include="src\modules\fields\editable\edit\spin\spin.component.html" />
+    <Content Include="src\modules\fields\editable\edit\types\year.month.edit.component.html" />
+    <Content Include="src\modules\fields\editable\field-error\field.error.component.html" />
+    <Content Include="src\modules\fields\editable\field-error\image.field.error.component.html" />
+    <Content Include="src\modules\fields\editable\field-error\plain.field.error.component.html" />
+    <Content Include="src\modules\fields\editable\saving-message\image.saving.message.component.html" />
+    <Content Include="src\modules\fields\editable\saving-message\plain.saving.message.component.html" />
+    <Content Include="src\modules\fields\editable\saving-message\saving.message.component.html" />
+    <Content Include="src\modules\fields\editable\static.field.prompt.component.html" />
+    <Content Include="src\modules\gallery\editable\editable.piece.list.item.component.html" />
+    <Content Include="src\modules\gallery\piece-list\piece.list.component.html" />
+    <Content Include="src\modules\gallery\piece-navigator\piece.navigator.button.component.html" />
+    <Content Include="src\modules\gallery\piece-navigator\piece.navigator.component.html" />
+    <Content Include="src\modules\gallery\shared\truncated.text.component.html" />
+    <Content Include="src\modules\gallery\views\category.view.html" />
+    <Content Include="src\modules\gallery\views\piece.view.scss" />
+    <Content Include="src\modules\gallery\piece-navigator\piece.navigator.component.scss" />
+    <Content Include="src\modules\gallery\piece-navigator\piece.navigator.button.component.scss" />
+    <Content Include="src\modules\gallery\views\category.view.scss" />
+    <Content Include="src\modules\gallery\piece-list\piece.list.component.scss" />
+    <Content Include="src\modules\home-view\home.view.html" />
+    <Content Include="src\modules\fields\editable\editable.field.component.scss" />
+    <Content Include="src\modules\fields\editable\edit\spin\spin.component.scss" />
+    <Content Include="src\modules\fields\editable\edit\types\year.month.edit.component.scss" />
+    <Content Include="src\modules\fields\editable\edit\types\image.edit.component.scss" />
+    <Content Include="src\modules\fields\editable\edit\types\category.link.edit.component.scss" />
+    <Content Include="src\modules\gallery\editable\editable.piece.list.component.scss" />
+    <Content Include="src\modules\gallery\editable\editable.piece.list.item.component.scss" />
+    <Content Include="src\modules\home-view\home.view.scss" />
+    <Content Include="src\modules\home-view\piece-ticker\piece.ticker.component.scss" />
+    <None Include="src\modules\main\app.component.scss" />
+    <Content Include="src\karma.conf.js" />
+    <Content Include="src\modules\gallery\piece-list\static.piece.list.component.html" />
+    <Content Include="src\modules\gallery\shared\static.piece.list.item.component.html" />
+    <Content Include="src\modules\gallery\views\piece.view.html" />
+    <Content Include="src\modules\home-view\piece-ticker\piece.ticker.component.html" />
+    <Content Include="src\modules\main\category-list\category.list.component.html" />
+    <Content Include="src\modules\main\login\login.component.html" />
+    <Content Include="src\modules\main\login\login.form.field.component.html" />
+    <Content Include="src\modules\main\login\login.form.component.html" />
+    <Content Include="src\modules\main\login\user.menu.component.html" />
+    <Content Include="src\modules\fields\static\types\static.category.link.field.component.html" />
+    <Content Include="src\modules\fields\static\thumbnail.component.html" />
+    <Content Include="src\modules\main\app.component.html" />
+    <Content Include="src\index.html" />
+    <Content Include="outline.txt" />
+    <Content Include="src\modules\shared\edit.buttons.component.html" />
+    <Content Include="src\modules\main\category-list\static.category.list.component.html" />
+    <Content Include="src\modules\shared\image-ticker\ticker.image.component.html" />
+    <Content Include="src\modules\shared\static-ordered-list\static.category.list.item.component.html" />
+    <Content Include="src\modules\main\dialogue\dialogue.component.html" />
+    <Content Include="src\modules\shared\spacer.component.html" />
+    <Content Include="src\modules\fields\field.component.html" />
+    <Content Include="src\modules\main\flyout\flyout.component.html" />
+    <Content Include="src\modules\shared\image-ticker\image.ticker.component.html" />
+    <Content Include="src\modules\main\load-screen\load.screen.component.html" />
+    <Content Include="src\modules\fields\static\static.field.component.html" />
+    <Content Include="src\modules\main\form\form.component.html" />
+    <Content Include="src\modules\main\form\form.field.component.html" />
+    <Content Include="src\modules\main\notification\notification.component.html" />
+    <Content Include="src\modules\main\ok-cancel\ok.cancel.component.html" />
+    <Content Include="src\modules\fields\editable\editable.field.component.html" />
+    <Content Include="src\modules\fields\editable\edit\edit.component.html" />
+    <Content Include="src\modules\fields\editable\edit\types\plain.edit.component.html" />
+    <Content Include="src\modules\staff\admin.guide.view.html" />
+    <Content Include="src\modules\staff\editable-ordered-list\editable.category.list.component.html" />
+    <Content Include="src\modules\gallery\editable\editable.piece.list.component.html" />
+    <Content Include="src\modules\fields\static\types\plain.static.field.component.html" />
+    <Content Include="src\modules\fields\static\types\static.image.field.component.html" />
+    <Content Include="src\modules\fields\static\types\static.thumbnail.field.component.html" />
+    <Content Include="src\modules\staff\editable-ordered-list\editable.category.list.item.component.html" />
+    <Content Include="src\styles\imports\all.scss" />
+    <Content Include="src\styles\imports\colours.scss" />
+    <Content Include="src\styles\imports\screen-sizes.scss" />
+    <Content Include="src\styles\initial-load-screen.css" />
+    <Content Include="src\styles\main.scss" />
+    <Content Include="src\styles\imports\typefaces.scss" />
+    <Content Include="src\styles\imports\layout.scss" />
+    <Content Include="src\modules\main\dialogue\dialogue.component.scss" />
+    <Content Include="src\modules\main\ok-cancel\ok.cancel.component.scss" />
+    <Content Include="src\modules\main\notification\notification.component.scss" />
+    <Content Include="src\styles\imports\fades.scss" />
+    <Content Include="src\modules\shared\edit.buttons.component.scss" />
+    <Content Include="src\modules\main\flyout\flyout.component.scss" />
+    <Content Include="src\modules\shared\static-ordered-list\static.category.list.item.component.scss" />
+    <Content Include="src\modules\shared\image-ticker\image.ticker.component.scss" />
+    <Content Include="src\modules\shared\spacer.component.scss" />
+    <Content Include="src\modules\fields\static\thumbnail.component.scss" />
+    <Content Include="src\styles\imports\selectors.scss" />
+    <Content Include="src\modules\gallery\shared\static.piece.list.item.component.scss" />
+    <Content Include="src\modules\main\load-screen\load.screen.component.scss" />
+    <Content Include="tsconfig.app.json" />
+    <Content Include="tsconfig.json" />
+    <Content Include="tsconfig.spec.json" />
+    <Content Include="src\modules\main\login\login.form.field.component.scss" />
+    <Content Include="src\modules\main\login\login.form.component.scss" />
+    <Content Include="src\modules\main\login\user.menu.component.scss" />
+    <Content Include="src\modules\staff\editable-ordered-list\editable.category.list.component.scss" />
+    <Content Include="src\modules\shared\image-ticker\ticker.image.component.scss" />
+    <Content Include="src\modules\staff\admin.guide.view.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\edit.component.base.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\editable.fields.module.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\content.editable.model.directive.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\content.editable.model.directive.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\edit.component.test.base.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\file.select.directive.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\file.select.directive.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\types\category.link.edit.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\types\category.link.edit.component.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\types\image.edit.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\types\image.edit.component.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\types\index.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\types\plain.edit.component.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\types\price.edit.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\types\price.edit.component.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\spin\index.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\spin\spin.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\spin\spin.component.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\spin\spin.labeller.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\spin\spin.labeller.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\types\typed.edit.component.test.base.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\types\typed.edit.component.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\types\year.month.edit.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\types\year.month.edit.component.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\field-error\field.error.component.base.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\field-error\field.error.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\field-error\field.error.component.test.base.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\field-error\field.error.component.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\field-error\image.field.error.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\field-error\image.field.error.component.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\field-error\index.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\field-error\plain.field.error.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\field-error\plain.field.error.component.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\index.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\types\plain.edit.component.test.base.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\saving-message\image.saving.message.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\saving-message\image.saving.message.component.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\saving-message\index.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\saving-message\plain.saving.message.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\saving-message\plain.saving.message.component.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\saving-message\saving.message.component.base.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\saving-message\saving.message.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\saving-message\saving.message.component.test.base.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\saving-message\saving.message.component.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\static.field.prompt.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\static.field.prompt.component.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\editable\editable.gallery.module.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\editable\editable.piece.list.item.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\editable\editable.piece.list.item.component.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\editable\index.ts" />
+    <TypeScriptCompile Include="src\modules\fields\fields.module.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\piece-list\index.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\piece-list\piece.list.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\piece-list\piece.list.component.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\piece-list\static.piece.list.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\piece-list\static.piece.list.component.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\shared\index.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\shared\static.piece.list.item.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\shared\static.piece.list.item.component.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\gallery.module.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\index.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\piece-navigator\index.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\piece-navigator\piece.navigator.button.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\piece-navigator\piece.navigator.button.component.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\piece-navigator\piece.navigator.button.spec.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\piece-navigator\piece.navigator.button.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\piece-navigator\piece.navigator.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\piece-navigator\piece.navigator.component.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\shared\shared.gallery.module.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\shared\truncated.text.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\shared\truncated.text.component.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\views\category.view.spec.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\views\category.view.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\views\gallery.view.test.base.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\views\gallery.view.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\views\index.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\views\piece.view.spec.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\views\piece.view.ts" />
+    <TypeScriptCompile Include="src\modules\home-view\piece-ticker\index.ts" />
+    <TypeScriptCompile Include="src\modules\home-view\piece-ticker\piece.ticker.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\home-view\piece-ticker\piece.ticker.component.ts" />
+    <TypeScriptCompile Include="src\modules\home-view\piece-ticker\piece.ticker.service.spec.ts" />
+    <TypeScriptCompile Include="src\modules\home-view\piece-ticker\piece.ticker.service.ts" />
+    <TypeScriptCompile Include="src\modules\main\category-list\category.list.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\category-list\category.list.component.ts" />
+    <TypeScriptCompile Include="src\modules\main\custom.http.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\custom.http.ts" />
+    <TypeScriptCompile Include="src\modules\fields\index.ts" />
+    <TypeScriptCompile Include="src\modules\main\flyout\flyout.service.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\flyout\flyout.service.ts" />
+    <TypeScriptCompile Include="src\modules\main\form\form.field.component.base.ts" />
+    <TypeScriptCompile Include="src\modules\main\form\form.field.component.test.base.ts" />
+    <TypeScriptCompile Include="src\modules\main\load-screen\load.screen.service.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\load-screen\load.screen.service.ts" />
+    <TypeScriptCompile Include="src\modules\main\login\index.ts" />
+    <TypeScriptCompile Include="src\modules\main\login\login.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\login\login.component.ts" />
+    <TypeScriptCompile Include="src\modules\main\login\login.form.field.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\login\login.form.field.component.ts" />
+    <TypeScriptCompile Include="src\modules\main\login\login.form.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\login\login.form.component.ts" />
+    <TypeScriptCompile Include="src\modules\main\login\login.form.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\login\login.form.ts" />
+    <TypeScriptCompile Include="src\modules\main\login\user.menu.component.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\category\category.selector.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\category\category.selector.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\field-descriptors\single.object.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\field-descriptors\string.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\field-descriptors\string.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\field-descriptors\test.base.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\gallery.model.test.base.ts" />
+    <TypeScriptCompile Include="src\modules\main\login\user.menu.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\table-string\index.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\table-string\table.string.service.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\table-string\table.string.service.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\table-string\table.string.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\table-string\table.string.ts" />
+    <TypeScriptCompile Include="src\modules\main\scroll.to.top.on.navigation.directive.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\scroll.to.top.on.navigation.directive.ts" />
+    <TypeScriptCompile Include="src\modules\main\sticky.nav.bar.directive.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\sticky.nav.bar.directive.ts" />
+    <TypeScriptCompile Include="src\modules\main\window.service.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\window.service.ts" />
+    <TypeScriptCompile Include="src\modules\shared\image-ticker\ticker.image.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\shared\image-ticker\ticker.image.component.ts" />
+    <TypeScriptCompile Include="src\modules\shared\static-ordered-list\ordered.list.item.component.test.base.ts" />
+    <TypeScriptCompile Include="src\modules\shared\static-ordered-list\ordered.list.item.component.ts" />
+    <TypeScriptCompile Include="src\modules\shared\static-ordered-list\static.ordered.list.item.component.test.base.ts" />
+    <TypeScriptCompile Include="src\modules\shared\static-ordered-list\static.ordered.list.item.component.ts" />
+    <TypeScriptCompile Include="src\modules\shared\image.preloader.spec.ts" />
+    <TypeScriptCompile Include="src\modules\shared\image.preloader.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\gallery.model.ts" />
+    <TypeScriptCompile Include="src\modules\shared\slow.loading.component.test.base.ts" />
+    <TypeScriptCompile Include="src\modules\shared\slow.loading.component.ts" />
+    <TypeScriptCompile Include="src\modules\shared\slow.loading.list.component.test.base.ts" />
+    <TypeScriptCompile Include="src\modules\shared\slow.loading.list.component.ts" />
+    <TypeScriptCompile Include="src\modules\shared\static.or.editable.slow.loading.component.test.base.ts" />
+    <TypeScriptCompile Include="src\modules\shared\view.test.base.ts" />
+    <TypeScriptCompile Include="src\modules\shared\view.ts" />
+    <TypeScriptCompile Include="src\modules\staff\admin.guide.view.spec.ts" />
+    <TypeScriptCompile Include="src\modules\staff\admin.guide.view.ts" />
+    <TypeScriptCompile Include="src\modules\staff\editable-ordered-list\editable.category.list.item.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\staff\editable-ordered-list\editable.category.list.item.component.ts" />
+    <TypeScriptCompile Include="src\modules\staff\editable-ordered-list\editable.ordered.list.item.component.test.base.ts" />
+    <TypeScriptCompile Include="src\modules\staff\staff.module.ts" />
+    <TypeScriptCompile Include="src\modules\fields\static\fast.loading.static.field.component.test.base.ts" />
+    <TypeScriptCompile Include="src\modules\fields\static\fast.loading.static.field.component.ts" />
+    <TypeScriptCompile Include="src\modules\fields\static\types\index.ts" />
+    <TypeScriptCompile Include="src\modules\fields\static\types\static.category.link.field.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\static\types\static.category.link.field.component.ts" />
+    <TypeScriptCompile Include="src\modules\fields\static\types\static.image.field.component.base.ts" />
+    <TypeScriptCompile Include="src\modules\fields\static\thumbnail.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\static\thumbnail.component.ts" />
+    <TypeScriptCompile Include="src\modules\home-view\home.view.spec.ts" />
+    <TypeScriptCompile Include="src\modules\home-view\index.ts" />
+    <TypeScriptCompile Include="src\modules\main\app.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\app.component.ts" />
+    <TypeScriptCompile Include="src\modules\home-view\home.view.ts" />
+    <TypeScriptCompile Include="src\modules\home-view\home.view.module.ts" />
+    <TypeScriptCompile Include="src\modules\shared\edit.buttons.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\shared\edit.buttons.component.ts" />
+    <TypeScriptCompile Include="src\modules\main\ok-cancel\index.ts" />
+    <TypeScriptCompile Include="src\modules\main\category-list\static.category.list.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\category-list\static.category.list.component.ts" />
+    <TypeScriptCompile Include="src\modules\shared\static-ordered-list\static.category.list.item.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\shared\static-ordered-list\static.category.list.item.component.ts" />
+    <TypeScriptCompile Include="src\modules\main\category-list\index.ts" />
+    <TypeScriptCompile Include="src\modules\main\dialogue\index.ts" />
+    <TypeScriptCompile Include="src\modules\shared\index.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\field-descriptors\year.month.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\field-descriptors\year.month.ts" />
+    <TypeScriptCompile Include="src\modules\shared\shared.module.ts" />
+    <TypeScriptCompile Include="src\modules\shared\spacer.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\shared\spacer.component.ts" />
+    <TypeScriptCompile Include="src\modules\shared\year.month.spec.ts" />
+    <TypeScriptCompile Include="src\modules\shared\year.month.ts" />
+    <TypeScriptCompile Include="src\modules\fields\field.component.base.ts" />
+    <TypeScriptCompile Include="src\modules\fields\field.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\field.component.test.base.ts" />
+    <TypeScriptCompile Include="src\modules\fields\field.component.ts" />
+    <TypeScriptCompile Include="src\modules\fields\static\index.ts" />
+    <TypeScriptCompile Include="src\modules\main\flyout\flyout.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\flyout\flyout.component.ts" />
+    <TypeScriptCompile Include="src\modules\main\flyout\index.ts" />
+    <TypeScriptCompile Include="src\modules\main\form\index.ts" />
+    <TypeScriptCompile Include="src\modules\shared\image-ticker\image.ticker.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\shared\image-ticker\image.ticker.component.ts" />
+    <TypeScriptCompile Include="src\modules\shared\image-ticker\index.ts" />
+    <TypeScriptCompile Include="src\modules\main\index.ts" />
+    <TypeScriptCompile Include="src\modules\main\load-screen\index.ts" />
+    <TypeScriptCompile Include="src\modules\main\load-screen\load.screen.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\load-screen\load.screen.component.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\category\category.service.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\category\category.service.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\category\category.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\category\category.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\category\index.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\field-descriptors\index.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\field-descriptors\multi.object.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\field-descriptors\multi.object.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\field-descriptors\single.object.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\field-descriptors\object.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\index.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\piece\index.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\reorderable.model.service.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\user\index.ts" />
+    <TypeScriptCompile Include="src\modules\main\notification\index.ts" />
+    <TypeScriptCompile Include="src\modules\shared\static-ordered-list\index.ts" />
+    <TypeScriptCompile Include="src\modules\shared\static-ordered-list\static.ordered.list.component.test.base.ts" />
+    <TypeScriptCompile Include="src\modules\shared\static-ordered-list\static.ordered.list.component.ts" />
+    <TypeScriptCompile Include="src\modules\staff\editable-ordered-list\index.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\index.ts" />
+    <TypeScriptCompile Include="src\modules\fields\static\static.field.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\static\static.field.component.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\field-descriptors\base.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\field-descriptors\base.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\field-descriptors\price.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\field-descriptors\price.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\model.service.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\model.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\piece\piece.service.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\piece\piece.service.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\piece\piece.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\piece\piece.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\user\user.service.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\user\user.service.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\user\user.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\user\user.ts" />
+    <TypeScriptCompile Include="src\modules\main\notification\notification.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\notification\notification.component.ts" />
+    <TypeScriptCompile Include="src\modules\main\notification\notification.service.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\notification\notification.service.ts" />
+    <TypeScriptCompile Include="src\modules\main\ok-cancel\ok.cancel.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\ok-cancel\ok.cancel.component.ts" />
+    <TypeScriptCompile Include="src\modules\main\dialogue\dialogue.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\dialogue\dialogue.component.ts" />
+    <TypeScriptCompile Include="src\modules\main\dialogue\dialogue.service.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\dialogue\dialogue.service.ts" />
+    <TypeScriptCompile Include="src\modules\main\form\form.field.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\form\form.field.component.ts" />
+    <TypeScriptCompile Include="src\modules\main\form\form.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\form\form.component.ts" />
+    <TypeScriptCompile Include="src\modules\main\form\form.spec.ts" />
+    <TypeScriptCompile Include="src\modules\main\form\form.ts" />
+    <TypeScriptCompile Include="src\modules\main\main.module.ts" />
+    <TypeScriptCompile Include="src\environments\environment.prod.ts" />
+    <TypeScriptCompile Include="src\environments\environment.ts" />
+    <TypeScriptCompile Include="src\main.ts" />
+    <TypeScriptCompile Include="src\modules\staff\editable-ordered-list\editable.category.list.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\staff\editable-ordered-list\editable.category.list.component.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\editable\editable.piece.list.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\gallery\editable\editable.piece.list.component.ts" />
+    <TypeScriptCompile Include="src\modules\staff\editable-ordered-list\editable.ordered.list.component.test.base.ts" />
+    <TypeScriptCompile Include="src\modules\staff\editable-ordered-list\editable.ordered.list.component.ts" />
+    <TypeScriptCompile Include="src\modules\staff\index.ts" />
+    <TypeScriptCompile Include="src\modules\fields\static\static.fields.module.ts" />
+    <TypeScriptCompile Include="src\modules\fields\static\types\static.image.field.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\static\types\static.image.field.component.test.base.ts" />
+    <TypeScriptCompile Include="src\modules\fields\static\types\static.image.field.component.ts" />
+    <TypeScriptCompile Include="src\modules\fields\static\types\static.thumbnail.field.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\static\types\static.thumbnail.field.component.ts" />
+    <TypeScriptCompile Include="src\modules\fields\static\types\static.year.month.field.component.ts" />
+    <TypeScriptCompile Include="src\modules\fields\static\types\static.price.field.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\static\types\static.price.field.component.ts" />
+    <TypeScriptCompile Include="src\modules\fields\static\types\static.string.field.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\static\types\static.string.field.component.ts" />
+    <TypeScriptCompile Include="src\modules\fields\static\types\static.year.month.field.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\static\types\static.date.field.component.ts" />
+    <TypeScriptCompile Include="src\modules\fields\static\typed.static.field.component.test.base.ts" />
+    <TypeScriptCompile Include="src\modules\fields\static\typed.static.field.component.ts" />
+    <TypeScriptCompile Include="src\settings.ts" />
+    <TypeScriptCompile Include="src\testing\data\date.test.field.ts" />
+    <TypeScriptCompile Include="src\testing\hosted.component.test.base.ts" />
+    <TypeScriptCompile Include="src\testing\index.ts" />
+    <TypeScriptCompile Include="src\testing\mock.components.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\editable.field.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\editable.field.component.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\edit.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\edit.component.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\types\string.edit.component.spec.ts" />
+    <TypeScriptCompile Include="src\modules\fields\editable\edit\types\string.edit.component.ts" />
+    <TypeScriptCompile Include="src\polyfills.ts" />
+    <TypeScriptCompile Include="src\test.ts" />
+    <TypeScriptCompile Include="src\testing\component.test.base.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\model.service.test.base.ts" />
+    <TypeScriptCompile Include="src\testing\data\basic.test.field.ts" />
+    <TypeScriptCompile Include="src\testing\data\datasets.ts" />
+    <TypeScriptCompile Include="src\testing\data\index.ts" />
+    <TypeScriptCompile Include="src\testing\data\linked.object.test.field.base.ts" />
+    <TypeScriptCompile Include="src\testing\data\linked.object.test.field.ts" />
+    <TypeScriptCompile Include="src\testing\data\model.instance.test.data.ts" />
+    <TypeScriptCompile Include="src\testing\data\model.test.data.ts" />
+    <TypeScriptCompile Include="src\testing\data\multi.linked.object.test.field.ts" />
+    <TypeScriptCompile Include="src\testing\data\test.field.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\model.test.base.ts" />
+    <TypeScriptCompile Include="src\modules\main\models\reorderable.model.service.test.base.ts" />
+    <TypeScriptCompile Include="src\testing\http.service.test.base.ts" />
+    <TypeScriptCompile Include="src\testing\static.or.editable.component.test.base.ts" />
+    <TypeScriptCompile Include="src\testing\test.with.module.ts" />
+    <TypeScriptCompile Include="src\testing\utils.ts" />
+    <TypeScriptCompile Include="src\typings.d.ts" />
+    <TypeScriptCompile Include="src\utils.spec.ts" />
+    <TypeScriptCompile Include="src\utils.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:6042/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptTarget>ES6</TypeScriptTarget>
+    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptModuleKind>System</TypeScriptModuleKind>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptMapRoot />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>

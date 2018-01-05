@@ -1,0 +1,113 @@
+﻿
+@keyframes fillPot {
+
+	0% {
+		transform: translate3d(0, 50%, 0) scaleY(0);
+		opacity: 1;
+	}
+
+
+	80% {
+		transform: translate3d(0, 5%, 0) scaleY(0.8);
+		opacity: 0.2;
+	}
+
+	
+	100% {
+		transform: translate3d(0, 0%, 0) scaleY(1);
+		opacity: 0;
+	}
+
+}
+
+
+.initialLoadScreen {
+	background: rgb(12, 6, 2);
+
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: -moz-flex;
+	display: -o-flex;
+	display: flex;
+
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-o-align-items: center;
+	align-items: center;
+
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-o-justify-content: center;
+	justify-content: center;
+
+	z-index: 2;
+
+	transition: opacity 1.5s, visibility 1.5s;
+	opacity: 0;
+	visibility: hidden;
+}
+
+
+.initialLoadScreen.visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+
+.loadIcon {
+	position: relative;
+}
+
+
+.pot {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+
+.initialLoadScreen .pot {
+	background: url('/images/loading/brown.svg');
+}
+
+
+.filling {
+	position: absolute;
+	top: 9%;
+	right: 9%;
+	bottom: 9%;
+	left: 9%;
+
+	animation: fillPot 1.5s linear infinite;
+}
+
+
+.initialLoadScreen .filling {
+	background: rgb(75, 97, 116);
+}
+
+
+@media (max-width: 676px) {
+
+	.initialLoadScreen .loadIcon {
+		width: 250px;
+		height: 365px;
+	}
+
+}
+
+
+@media (min-width: 676px) {
+
+	.initialLoadScreen .loadIcon {
+		width: 350px;
+		height: 511px;
+	}
+
+}

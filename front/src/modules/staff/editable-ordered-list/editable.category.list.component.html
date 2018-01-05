@@ -1,0 +1,54 @@
+﻿<div class="categoryList">
+
+	<div *ngFor="let category of objectsInPresentedOrder; let first = first; let last = last"
+		class="listItemWrapper buttonContainer"
+	>
+
+		<editable-category-list-item
+			[object]="category"
+			(load)="onItemLoad(category)"
+		></editable-category-list-item>
+
+		<edit-buttons *ngIf="userService.isStaff && !category.deleting"
+			(up)="moveUp(category)"
+			(down)="moveDown(category)"
+			(delete)="delete(category)"
+			[upVisible]="!first"
+			[downVisible]="!last"
+			placement="left"
+		></edit-buttons>
+
+	</div>
+
+
+	<div *ngIf="addingNewObject; else linkForAddNew"
+		class="addNew"
+	>
+		<ng-container *ngTemplateOutlet="contentsForAddNew">
+		</ng-container>
+	</div>
+
+	<ng-template #linkForAddNew>
+		<a class="addNew" href="javascript:;" (click)="addNew()">
+			<ng-container *ngTemplateOutlet="contentsForAddNew">
+			</ng-container>
+		</a>
+	</ng-template>
+
+	<ng-template #contentsForAddNew>
+		<div class="plusContainer"
+			 [class.busy]="addingNewObject">
+			<img class="plus" src="images/buttons/add/beige.svg" alt="+" />
+
+			<div class="label">
+				{{addingNewObject ? 'Adding...' : 'Add category'}}
+			</div>
+		</div>
+	</ng-template>
+
+
+	<div *ngIf="addingErrorMessage" class="error">
+		{{addingErrorMessage}}
+	</div>
+
+</div>

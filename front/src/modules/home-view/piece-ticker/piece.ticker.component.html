@@ -1,0 +1,10 @@
+﻿<image-ticker *ngIf="imageList"
+	[imageList]="imageList"
+	[rootDirectory]="imageParams.rootDirectory"
+	[widthList]="imageParams.widthList"
+	[turnaroundTime]="turnaroundTime"
+	[showLinks]="true"
+	(load)="onReady()"
+	(select)="onImageSelect($event)"
+	(show)="onImageShow($event)"
+></image-ticker>

@@ -1,0 +1,89 @@
+﻿@import '../../../styles/imports/all';
+
+
+
+$detail-box-padding: 15px;
+$price-date-size: 1.1em;
+
+
+
+.pieceListItem {
+
+	margin-bottom: 2px;
+	width: 100%;
+	
+	break-inside: avoid-column;
+
+
+	::ng-deep img {
+		width: 100%;
+	}
+
+
+	.detail {
+
+		@include non-desktop {
+			display: none;
+		}
+
+		@include responsive-colour('color', $beige);
+
+		position: absolute;
+		max-width: 250px;
+		z-index: 1;
+
+		background: $murky-black;
+		padding: $detail-box-padding;
+		border: 2px solid $light-brown;
+		border-radius: $detail-box-padding * 2;
+
+		transition: opacity $quick-fade;
+		opacity: 0;
+
+		pointer-events: none;
+
+
+		.topLine {
+
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-between;
+
+			&:not(:last-child) {
+				margin-bottom: 1em;
+			}
+
+			.name {
+				font-size: 1.5em;
+				@include no-margin-at-very-bottom;
+
+				&:not(:last-child) {
+					margin-right: 1em;
+				}
+			}
+
+			.price {
+				font-size: $price-date-size;
+			}
+
+		}
+
+
+		.description {
+			font-size: 0.8em;
+			margin-bottom: 1em;
+
+			@include no-margin-at-very-bottom;
+		}
+
+
+		.date {
+			display: inline-block;
+			font-size: $price-date-size;
+			font-style: italic;
+		}
+
+	}
+
+}

@@ -1,0 +1,7 @@
+﻿<image-saving-message *ngIf="hasImageType; else plain"
+	[state]="state"
+></image-saving-message>
+
+<ng-template #plain>
+	<plain-saving-message [state]="state"></plain-saving-message>
+</ng-template>

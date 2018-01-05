@@ -1,0 +1,39 @@
+﻿<ng-container *ngIf="userService.isStaff; else forbidden">
+
+	<h1>Running the site</h1>
+	<p>Here are what I hope will be some handy tips for keeping your catalogue up to date.</p>
+
+	<h2>Be careful!</h2>
+	<p>Whenever you, as an administrator, sign in, the site will fill with buttons (<img src="images/buttons/edit.svg" alt="" /><img src="images/buttons/delete.svg" alt="" /><img src="images/buttons/up.svg" alt="" /><img src="images/buttons/down.svg" alt="" />) that make permanent changes to the catalogue. This can be particularly risky on a phone or tablet where it's easy to press things by accident (god knows I've made enough mistakes while putting this together) so zooming in is recommended, if you're not able to do your editing on a computer.</p>
+
+	<h2>Adding material</h2>
+	<p>You'll see a <img src="images/buttons/add/beige.svg" alt="+" /> icon in a couple of places around the site.</p>
+
+	<ul>
+
+		<li>
+			<strong>Add piece:</strong> Use the links on the left to choose a category, wait for the gallery to appear, and you'll find an &lsquo;add&rsquo; button at the end (bottom right). A blank piece will be created, which you can click on to start editing.
+		</li>
+
+		<li><strong>Add category:</strong> There's an <strong>add</strong> button for categories beneath the list on the left; again, the new category will be blank and empty so open it up and start editing/filling.</li>
+
+	</ul>
+
+	<h2>Editing information</h2>
+	<p>Each entry, whether it's a piece or category, is made up of fields (name, description, date, picture, etc). All of these can be <strong>edited</strong> (<img class="icon" src="images/buttons/edit.svg" alt="" />) and some can be <strong>deleted</strong> (<img class="icon" src="images/buttons/delete.svg" alt="" />), and you'll see those buttons by hovering the mouse over a field on the computer, or by pressing and holding it on a touch screen. When you're done editing, press <strong>enter</strong> or <strong>click outside</strong> the field to save, or press <strong>escape</strong> to cancel and lose the change.</p>
+	<p>Pieces can be <strong>moved between categories</strong> in this same way: open the piece and press <img class="icon" src="images/buttons/edit.svg" alt="" /> over its category name, just above its own title, then choose another category from the drop-down list.</p>
+	<p>Editing dates is a little trickier. Once you've pressed <img class="icon" src="images/buttons/edit.svg" alt="" />, use the blue arrows to choose years and months. Either can be <strong>switched on and off</strong>, in case you'd like a year but no specific month; switching off the year will give you no date at all.</p>
+
+	<h2>Reordering</h2>
+	<p>The left-hand category list, and each gallery in itself, can be rearranged using the <strong>green arrows</strong> (<img src="images/buttons/up.svg" alt="" /><img src="images/buttons/down.svg" alt="" />) which appear on hovering the mouse, or pressing and holding on a touch screen, over each entry. There are also <strong>delete</strong> (<img class="icon" src="images/buttons/delete.svg" alt="" />) buttons here.</p>
+	<p>Galleries are organised in <strong>columns</strong>, like a newspaper; move a piece at the top of a column &lsquo;up&rsquo; and it'll take its place at the bottom of the next-left column, and vice versa. This should let you find an arrangement that suits your taste regarding colours and so forth.</p>
+	<p class="conclusion">I hope this covers everything you need; I'm always happy to help if not.</p>
+
+</ng-container>
+
+<ng-template #forbidden>
+
+	<h1>Who goes there?</h1>
+	<p><a href="javascript:;" (click)="showLogin($event)">Log in as an administrator</a> to see this guide.</p>
+
+</ng-template>

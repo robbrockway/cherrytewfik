@@ -1,0 +1,44 @@
+﻿<div class="quoteAndTicker">
+	<div class="quote artistStatement">
+
+		<div class="quoteMark open">
+			<img src="images/quotes/open.svg" alt="&ldquo;" />
+		</div>
+
+		<div>
+			<field type="multiline"
+				[object]="stringTable?.statement"
+				propertyName="value"
+				label="artist's statement"
+				(load)="onSubcomponentLoad()"
+			></field>
+		</div>
+
+		<div class="quoteMark close">
+			<img src="images/quotes/close.svg" alt="&ldquo;" />
+		</div>
+
+	</div>
+
+	<div class="tickerContainer">
+		<piece-ticker [pieces]="pieces" (load)="onSubcomponentLoad()">
+		</piece-ticker>
+	</div>
+</div>
+
+<div class="quoteAndTicker">
+	<div class="tickerContainer">
+		<piece-ticker [pieces]="pieces" (load)="onSubcomponentLoad()">
+		</piece-ticker>
+	</div>
+
+	<div class="quote">
+		<field type="multiline"
+			[object]="stringTable?.bio"
+			propertyName="value"
+			label="biography"
+			(load)="onSubcomponentLoad()"
+		></field>
+	</div>
+</div>
+

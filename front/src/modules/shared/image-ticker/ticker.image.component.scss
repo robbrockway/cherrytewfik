@@ -1,0 +1,26 @@
+﻿
+a:not(.foreground) {
+	pointer-events: none;
+}
+
+
+.outerWrapper {	
+
+	position: absolute;
+	display: block;
+
+
+	&.hidden {
+		opacity: 0;
+	}
+
+
+	&.foreground {
+		z-index: 1;
+	}
+
+	img {
+		width: 100%;
+	}
+
+}

@@ -1,0 +1,10 @@
+﻿<thumbnail *ngIf="value; else placeholder"
+	[filename]="value"
+	[widthList]="widthList"
+	[rootDirectory]="rootDirectory"
+	(load)="onReady()"
+></thumbnail>
+
+<ng-template #placeholder>
+	<img [src]="placeholderSrc" alt="" (load)="onReady()" />
+</ng-template>

@@ -1,0 +1,13 @@
+﻿@import '../../../styles/imports/all';
+
+
+.deletingMessage {
+
+	@include overlay;
+	@include dead-centre;
+
+	color: $beige;
+	text-decoration: none;
+	font-size: 16px;
+
+}

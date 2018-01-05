@@ -1,0 +1,22 @@
+﻿@import '../../../styles/imports/all';
+
+
+
+$num-columns: 3;
+
+
+
+::ng-deep .pieceList {
+	
+	@include non-phone {
+		column-count: $num-columns;
+		column-width: 100% / $num-columns;
+		column-gap: 2px;
+	}
+
+
+	piece-list-item:first-child .pieceListItem {
+		margin-top: 0;
+	}
+
+}

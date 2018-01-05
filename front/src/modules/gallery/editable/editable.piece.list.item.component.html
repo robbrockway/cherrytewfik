@@ -1,0 +1,16 @@
+﻿<static-piece-list-item
+	[object]="piece"
+	[reorder$]="reorder$"
+	[linkEnabled]="!piece.deleting"
+	(load)="onReady()"
+>
+	<ng-content></ng-content>
+	
+	<div *ngIf="piece.deleting"
+		class="deletingMessage"
+		[class.shroud]="deletingMessageShouldBeShrouded"
+	>
+		Deleting...
+	</div>
+
+</static-piece-list-item>

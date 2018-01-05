@@ -1,0 +1,28 @@
+<nav [(class)]="navCssClass" (classChange)="onNavClassChange()">
+	
+	<a routerLink="/">
+		<img 
+			 class="banner"
+			 src="images/banner.svg"
+			 alt="Cherry Tewfik Ceramics"
+		/>
+	</a>
+	
+	<category-list [(objects)]="categories"></category-list>
+
+	<div class="flyouts">
+		<login></login>
+	</div>
+
+</nav>
+
+<div class="content" scrollToTopOnNavigation>
+	<router-outlet></router-outlet>
+	<load-screen
+		[visible]="loadScreenVisible"
+		animation="fadeOut"
+	></load-screen>
+</div>
+
+<dialogue></dialogue>
+<notification></notification>

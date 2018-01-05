@@ -1,0 +1,10 @@
+﻿<span #textBox
+	[class.faint]="showingPrompt"
+	(keydown)="onKeyDown($event)"
+	(keyup.enter)="onEnterKeyUp($event)"
+	(keypress)="onKeyPress($event)"
+	contenteditable="true"
+	[(contenteditableModel)]="boxContents"
+	(contenteditableModelChange)="onInput($event)"
+	(blur)="onBlur()"
+></span>

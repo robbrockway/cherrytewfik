@@ -1,0 +1,11 @@
+﻿<div class="editButtons {{placement}}">
+	<a *ngFor="let buttonName of visibleButtonNames"
+		href="javascript:;"
+		(click)="onClick(buttonName, $event)"
+	>
+		<img
+			src="images/buttons/{{buttonName}}.svg"
+			[alt]="buttonName"
+		/>
+	</a>
+</div>

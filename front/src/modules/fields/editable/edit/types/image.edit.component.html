@@ -1,0 +1,14 @@
+﻿<div class="imageEdit shroud centredColumn">
+	Choose a high-resolution image
+	
+	<div *ngIf="errorMessage" class="error">
+		{{errorMessage}}<br/>
+		<a href="javascript:;" (click)="selectAgain()">Try again</a>
+	</div>
+
+	<input #fileSelector
+		type="file"
+		accept=".jpg,.jpeg,.png"
+		(fileSelect)="onFileSelect($event)"
+	/>
+</div>

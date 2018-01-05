@@ -1,0 +1,55 @@
+﻿@import '../../../styles/imports/all';
+
+
+$zoom-factor: 1.25;
+
+
+
+@keyframes slowZoom {
+
+	0% {
+		transform: scale(1) #{$hardware-accelerated};
+	}
+
+
+	100% {
+		transform: scale($zoom-factor) #{$hardware-accelerated};
+	}
+
+}
+
+
+
+:host ::ng-deep .ticker {
+
+	top: 50%;
+
+
+	.outerWrapper {
+
+		position: absolute;
+		@include dead-centre;
+		width: 100%;
+		height: 100%;
+
+
+		&:not(.foreground) {
+			opacity: 0;
+		}
+
+
+		.innerWrapper {
+
+			width: 100%;
+			overflow: hidden;
+			box-shadow: $light-shadow;
+
+			img.moving {
+				animation: slowZoom linear forwards;
+			}
+
+		}
+
+	}
+
+}

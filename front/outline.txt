@@ -1,0 +1,123 @@
+
+MAIN COMPONENT TREE
+
+– AppComponent [from MainModule]
+	– <nav bar>
+		– CategoriesMenuComponent
+			– CategoryTickerComponent for each category
+				– extends ImageTickerComponent
+				– ReorderAndDeleteComponent, if staff
+			– NewCategoryComponent [from StaffModule], if staff
+		– Other menu items, each extending FlyoutComponent
+			– LoginComponent
+				– BasketComponent [from LoggedInModule], if logged in
+					– BasketListingComponent for each piece
+			– CommentsComponent
+			– ContactComponent
+	– <router outlet>
+	– DialogueComponent [from MainModule]
+		– Only one in existence at any given time
+		– Receives Dialogue objects through stream, displays them, and returns whatever response
+	– NotificationComponent
+		– Message in top right of screen; receives Notification objects through stream and displays them
+
+
+ROUTER OUTLET COMPONENTS
+
+– HomeView [from HomeViewModule]
+	– Two instances of FieldComponent (bio and artist's statement)
+		– Make sure FieldComponent works for string table
+	– Two instances of AllPiecesTickerComponent
+		– Include link to the currently-displayed piece
+	– UpcomingExhibitionsComponent
+		– Mostly a lot of FieldComponent instances
+	– PastExhibitionsComponent
+		– Likewise
+
+– CategoryView [from CategoryViewModule]
+	– FieldComponent for title, and for description
+	– PieceListItemComponent for each piece
+		– ThumbnailComponent for zoomable image
+		– GalleryDetailComponent for mouseover text
+		– ReorderAndDeleteComponent, if staff
+	– NewPieceComponent [from StaffModule], if staff
+		
+
+– PieceView [from PieceViewModule]
+	– PieceNavComponent
+		– Prev/next/random buttons (components in themselves?)
+	– Lots of FieldComponent instances
+
+
+– EditProfileView [from EditProfileViewModule]
+	– FormComponent for name/email?
+	– Another FormComponent for password?
+
+
+– AdminGuideView [from StaffModule]
+	– Load guide from JSON file?
+
+
+– Checkout process [from CheckoutModule]
+	– ConfirmItemsView
+		– OrderSummaryComponent?
+	– ShippingOptionsView
+		– AddressSelectorComponent
+			– AddressSelectorOptionComponent for each address
+				– Deletable (EditButtonsComponent)
+	– PaymentOptionsView
+		– Load hosted fields from Braintree
+	– PlaceOrderView
+		– OrderSummaryComponent again?
+		– along with summaries of shipping and payment info
+
+
+– Order management stuff (own orders, and all orders if staff)
+	– Staff needs to be able to look at a user and their order history
+	– Editing/cancelling orders
+	– OrderView [from OrderViewModule]
+		– OrderSummaryComponent again, with editability
+
+
+
+IMMEDIATE TODO LIST
+
+– Phone and browser behaviour
+
+
+OTHER THINGS TO DO
+
+– Warning message before deleting category (and piece?)
+– Move EditButtonsComponent properly inside EditableOrderedListItemComponent, rather than injecting it from outside
+	– Take [upVisible] and [downVisible] inputs; give (up), (down) and (delete) events
+	– Simplify navigation back to home if selected category is deleted: can be handled by list item, not whole list, which needn't any longer keep track of CategorySelector
+– Mass image upload
+– Exhibition list
+– Registration
+– Comments (including for individual pieces/categories?)
+– Basket, orders, checkout
+	– Staff controls: dispatch etc
+– Contact form
+– Progress bar for image upload, and for various operations that send email
+– Image tickers in category list: respond to adding/changing/deletion of piece images
+– Which other tests can use async rather than fakeAsync? Could cut out lots of bulky flushMicrotasks() calls.
+– DirectiveTest (subclass of ComponentTest; supply .hostComponent and .directive members)
+– Animation/transition troubles in IE
+	– Category menu and load screen inexplicably aren't animating like everything else is
+– Split utils up between modules
+
+
+ASSORTED NOTES
+
+– Deal with circular dependency warning
+	– How come this particular circle is a problem, but e.g. category.service -> category -> category.service is fine?
+– Possible redesign of caching system
+	– Rather than calling .cacheLinkedObjects() recursively, find the entire collection of linked objects first, then cache them in one go
+– Consider using a Set, instead of a list, for multiple linked objects. They're not kept in any particular order, but must be unique.
+– Heaps of benign-but-distracting 404 errors in tests
+– StaticFieldComponent template is looking necessarily knotty to avoid whitespace. Any way around this without creating visible space between prefix and field e.g. '£ 150'?
+	– Generating subcomponents of StaticFieldComponent dynamically could solve this, and would cut out a lot of repeated code in the template (but be harder to test, as mock components might not be useable)
+– Giving PieceNavigatorButtonComponent a direct routerLink to the desired piece would be a more elegant solution than the current one (emitting a click event; navigator itself emits the next piece; router is uninvolved)
+– Shroud/dialogue are still 'displayed', though entirely transparent, most of the time; does this affect performance? Try changing if things get slow
+– Lots of change detection going on in forms. Would it make a noticeable difference to cache certain values (concerning layout, etc) rather than calculating them on the fly?
+– Unit tests for modules

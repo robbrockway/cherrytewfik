@@ -1,0 +1,39 @@
+﻿@import '../../../styles/imports/all';
+
+
+$arrow-movement: 20%;
+$vertical-margin: 30px;
+$non-phone-nav-side-margin: -15px;
+
+
+
+.navigator {
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	
+	@include non-phone {
+		margin: $vertical-margin $non-phone-nav-side-margin;
+	}
+
+	@include phone {
+		margin: $vertical-margin 0px;
+	}
+
+
+	::ng-deep piece-navigator-button {
+
+		&:first-child a:hover .button img {
+			transform: translate3d(-$arrow-movement, 0px, 0px);
+		}
+
+
+		&:last-child a:hover .button img {
+			transform: translate3d($arrow-movement, 0px, 0px);
+		}
+
+	}
+
+}

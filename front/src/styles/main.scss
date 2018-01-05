@@ -1,0 +1,292 @@
+﻿@import './imports/all';
+
+
+
+body {
+
+	background: $dark-brown;
+	@include responsive-colour('color', $beige);
+
+	font-family: $main-font-family;
+	font-size: $main-font-size;
+	line-height: $default-line-height;
+
+	margin: 0px;
+	padding: 0px;
+
+}
+
+
+nav {
+
+	background: $black;
+	text-align: center;
+
+	border: 0px solid;
+	@include responsive-colour('border-color', $light-brown);
+
+	z-index: 2;
+
+
+	@include desktop {
+
+		left: 0px;
+		width: $desktop-nav-width;
+		min-height: 100%;
+
+		padding: 20px 0px 40px;
+		border-right-width: $nav-border-width;
+
+		&.fixed {
+			position: fixed;
+			top: 0px;
+		}
+
+		&.moving {
+			position: absolute;
+			top: 0px;
+		}
+
+		&.sticky {
+			position: fixed;
+			bottom: 0px;
+		}
+
+	}
+
+
+	@include non-desktop {
+		width: 100%;
+		border-bottom-width: $nav-border-width;
+
+		.flyouts {
+			margin: $non-desktop-space-below-flyout-headings 10px;
+		}
+
+	}
+
+
+	.banner {
+		width: 90%;
+	}
+
+
+	.categoryList {
+		margin: 30px 0px;
+	}
+
+}
+
+
+.content {
+
+	@include desktop {
+		padding: $desktop-content-padding;
+		padding-left: $nav-border-width + $desktop-content-padding;
+		margin-left: $desktop-nav-width;
+	}
+
+	@include non-desktop {
+		width: calc(100% - #{$non-desktop-side-margin * 2});
+		margin: 80px $non-desktop-side-margin;
+
+		position: relative;
+	}
+
+
+	.loadScreen {
+		background: $dark-brown;
+		
+		@include desktop {
+			position: fixed;
+			top: 0;
+			left: calc(33% + #{$nav-border-width});
+			right: 0;
+			bottom: 0;
+		
+			@include dead-centre;
+		}
+
+		@include non-desktop {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+		}
+
+
+		.loadIcon {
+
+			.filling {
+				background: $light-blue;
+			}
+
+
+			.pot {
+				background: $brown-pot;
+			}
+
+
+			@include non-phone {
+				width: $load-icon-width;
+				height: $load-icon-height;
+			}
+
+			@include phone {
+				width: $load-icon-width * $phone-load-icon-scale-factor;
+				height: $load-icon-height * $phone-load-icon-scale-factor;
+			}
+
+		}
+
+	}
+
+}
+
+
+
+a, a:active, a:visited, a:focus {
+	@include responsive-colour('color', $light-blue);
+	text-decoration: underline;
+	transition: color $quick-fade;
+
+	outline: 0;
+}
+
+
+a:hover {
+	@include responsive-colour('color', $lighter-blue);
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	line-height: 1.5em;
+}
+
+
+h1 {
+	font-size: 36px;
+}
+
+
+.error {
+	@include responsive-colour('color', $red);
+}
+
+
+.properties {
+	font-size: $main-font-size + 2px;
+
+	display: inline-block;
+	padding-bottom: $properties-bar-padding;
+	border-bottom: 1px solid;
+	@include responsive-colour('border-bottom-color', $faint-beige);
+
+
+	span {
+		display: inline-block;
+	}
+}
+
+
+.visible {
+	opacity: 1 !important;
+}
+
+
+.faint {
+	opacity: 0.4;
+}
+
+
+.shroud {
+	background: $murky-black;
+}
+
+
+button {
+	background: $light-brown;
+	@include responsive-colour('color', $medium-beige);
+	
+	font: inherit;
+	font-size: 1.1em;
+
+	border: none;
+	border-radius: 7px;
+	padding: 10px;
+}
+
+
+input, textarea {
+	background: $black;
+	color: $bright-beige;
+	font: inherit;
+
+	border: $light-brown 2px solid;
+
+	padding: 3px;
+}
+
+
+.centredColumn {
+	@include dead-centre;
+	flex-direction: column;
+}
+
+
+.buttonContainer {
+	position: relative;
+}
+
+
+hr.separator {
+	display: none;
+}
+
+
+.addNew {
+
+	text-decoration: none;
+
+	
+	.plusContainer {
+
+		@include fade-up-on-hover(0.4);
+	
+	
+		.plus {
+			transition: transform $quick-fade;
+			transform: scale(0.75) #{$hardware-accelerated};
+		}
+
+		&.busy, &.busy:hover {
+			opacity: 0.25;
+
+			.plus {
+				transform: none;
+			}
+
+		}
+
+		.label {
+			@include responsive-colour('color', $beige);
+		}
+
+	}
+
+
+	&:hover .plus {
+		transform: none;
+	}
+
+}	
+
+
+a:hover .plus {
+	transform: scale(1) #{$hardware-accelerated};
+}

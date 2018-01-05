@@ -1,0 +1,16 @@
+﻿<div class="userMenu">
+	<ul>
+		<li *ngIf="userService.isStaff">
+			<a routerLink="/staff/guide"
+			   (click)="closeBox();"
+			>
+				Admin guide
+			</a>
+		</li>
+		<li *ngFor="let item of menu">
+			<a href="javascript:;"
+				(click)="item.eventEmitter.emit()"
+			>{{item.label}}</a>
+		</li>
+	</ul>
+</div>
