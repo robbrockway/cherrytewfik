@@ -1,0 +1,10 @@
+{% for piece in pieces %}
+{{piece.name}}: {{pound_sign}}{{piece.price}}
+{% endfor %}{% if show_total_balance is None or show_total_balance %}
+TOTAL: {{pound_sign}}{{order.total_balance}}
+{% endif %}
+
+Delivery address:
+
+{{order.recipient_name}}
+{{order.address}}

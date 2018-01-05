@@ -1,0 +1,5 @@
+﻿{% include "header.html" %}
+<h2>Dear {{admin_first_name}},</h2>
+<p>{{user_link}} has cancelled an order, which consisted of these items:</p>
+{% include "order_info.html" with show_total_balance=False %}
+{% include "footer.html" %}

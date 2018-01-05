@@ -1,0 +1,4 @@
+﻿{% include "header.html" %}
+<h2>Dear {{user.first_name}} {{user.last_name}},</h2>
+<p>You have asked to change your registered email address to <a href="mailto:{{new_address}}">{{new_address}}</a>. If this is correct, follow <a href="{{activation_url}}" target="_blank">this link</a> to confirm the change.</p>
+{% include "footer.html" %}

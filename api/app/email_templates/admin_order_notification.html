@@ -1,0 +1,6 @@
+﻿{% include "header.html" %}
+<h2>Dear {{admin_first_name}},</h2>
+<p>{{user_link}} has ordered the following items:</p>
+{% include "order_info.html" %}
+<p>Payment will be taken once you mark the order as dispatched. To do this, follow <a href="{{order_url}}">this link</a>.</p>
+{% include "footer.html" %}

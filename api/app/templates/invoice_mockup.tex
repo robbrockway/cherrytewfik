@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage{fontspec, xltxtra, multicol, pstricks, graphicx, titlesec, longtable, tabu}
+\usepackage[a4paper, margin=2.5cm]{geometry}
+
+\setmainfont{Cabin}[Path=fonts/, UprightFont=*-Regular, BoldFont=*-Bold, ItalicFont=*-Italic]
+\graphicspath{ {images/} }
+\setlength\parindent{0pt}
+\setlength\tabcolsep{0pt}
+\titlespacing*{\section}{0pt}{1cm}{0cm}
+
+\renewcommand{\arraystretch}{0}
+\newcommand{\rowspace}{\vspace{14pt}}
+\newcommand{\rowdone}{\\ \noalign{\rowspace} \hline \noalign{\rowspace}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}m{#1}}
+\definecolor{rule}{gray}{0.75}
+
+\title{Invoice for Joe Bloggs}
+\date{2017-09-02}
+\author{Cherry Tewfik Ceramics}
+
+\begin{document}
+	\begin{flushright}
+		\input{logo.tex}
+	\end{flushright}
+	\begin{multicols}{2}
+		Joe Bloggs\\
+		Customer's address\\
+		Line 3\\
+		Line 4\\
+		EF45 GHI
+		\vfill\null
+		\columnbreak
+		\begin{flushright}
+			Cherry Tewfik Ceramics\\
+			Cherry's address\\
+			Line 3\\
+			Line 4\\
+			AB12 3CD
+		\end{flushright}
+	\end{multicols}
+	\begin{multicols}{2}
+		3\textsuperscript{rd} September 2017
+		\section*{Invoice}
+		\vfill\null
+		\columnbreak
+		\begin{flushright}
+			Order number: \textit{40394623}
+		\end{flushright}
+	\end{multicols}
+	\begin{longtabu}{m{5cm} X R{2cm}}
+		\taburulecolor{rule}
+		\includegraphics[scale=0.3]{1.jpg} & Pot 1 & \textsterling50.00 \rowdone
+		\includegraphics[scale=0.3]{2.jpg} & Pot 2 & \textsterling60.00 \rowdone
+		\multicolumn{2}{R{13cm}}{\textbf{Total paid}} & \textbf{\textsterling110.00} \\
+	\end{longtabu}
+\end{document}

@@ -1,0 +1,6 @@
+﻿{% include "header.html" %}
+<h2>Dear {{customer_name}},</h2>
+<p>The following items have been sent to you, via [some shipping method]:</p>
+{% include "order_info.html" %}
+<p>This completes your order. Please <a href="{{comment_url}}">leave a comment</a> on the site, and come back for more pottery soon!</p>
+{% include "footer.html" %}

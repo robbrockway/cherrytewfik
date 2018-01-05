@@ -1,0 +1,10 @@
+Dear {{customer_name}},
+
+The following items have been sent to you, via [some shipping method]:
+
+{% include "order_info.txt" %}
+
+This completes your order. Please leave a comment on the site, and come back for more pottery soon!
+
+
+{{site_root}}/

@@ -1,0 +1,10 @@
+{% for piece in pieces %}
+{{piece.name}}: {{pound_sign}}{{piece.price}}
+{% endfor %}
+TOTAL: {{order.total_balance}}
+
+
+Delivery address:
+
+{{order.recipient_name}}
+{{order.address}}

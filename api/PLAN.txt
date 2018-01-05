@@ -1,0 +1,19 @@
+CHERRY TEWFIK SITE API
+
+MODEL TYPES:
+
+Piece
+	– Name
+	– Date
+	– Price
+	– Description
+	– Image
+	– Visible to admin:
+		– Reservation
+			– By whom? (user)
+			– When? (Expire after an hour)
+		– Order (see below)
+
+Category
+	– Contains pieces, in a particular sequence
+	– 

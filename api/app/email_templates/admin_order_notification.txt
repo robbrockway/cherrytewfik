@@ -1,0 +1,7 @@
+Dear {{admin_first_name}},
+
+{{customer_name}} has ordered the following items:
+
+{% include "order_info.txt" %}
+
+Payment will be taken once you mark the order as dispatched. To do this, go to: {{order_url}}

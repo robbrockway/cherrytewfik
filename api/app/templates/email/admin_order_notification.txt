@@ -1,0 +1,9 @@
+Dear {{admin_first_name}},
+{% if is_new_order %}
+{{customer_name}} has ordered the following items:
+{% else %}
+{{customer_name}} has edited order number {{order.id}}, which now consists of the following items:
+{% endif %}
+{% include "order_info.txt" %}
+
+Payment will be taken once you mark the order as dispatched. To do this, go to: {{order_url}}

@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin" />
+		<style>
+			body {
+				font-family: Cabin;
+				font-size: 14px;
+			}
+
+			.shortMessage {
+				display: block;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<a class="shortMessage" href="{{site_root}}/" target="_blank">
+			<img class="logo" src="images/logo.png" alt="" />
+		</a>
+		<style>
+			table {
+				margin: 25px 0px;
+			}
+
+			td {
+				padding: 10px 0px;
+			}
+
+			td.name, td.price, td.total {
+				text-align: right;
+			}
+			
+			td.name, td.totalLabel {
+				padding: 10px 30px;
+				font-size: 18px;
+			}
+
+			td.totalLabel, td.total {
+				font-weight: bold;
+			}
+
+			td.totalLabel {
+				font-size: 24px;
+			}
+
+			td.total {
+				font-size: 18px;
+			}
+
+			.address {
+				margin: 20px 0px 40px;
+			}
+		</style>
+		<h2>Dear Joe Bloggs,</h2>
+		<p>Thank you for your order. You have bought these ceramics:</p>
+		<table>
+			<tr>
+				<td>
+					<img src="../images/pieces/180w/mockup1.jpg" alt="" />
+				</td>
+				<td class="name">
+					Potty McPotface
+				</td>
+				<td class="price">
+					&pound;50.00
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img src="../images/pieces/180w/mockup2.jpg" alt="" />
+				</td>
+				<td class="name">
+					Facey McPotpot
+				</td>
+				<td class="price">
+					&pound;60.00
+				</td>
+			</tr>
+			<tr>
+				<td class="totalLabel" colspan="2">
+					Total
+				</td>
+				<td class="total">
+					&pound;110.00
+				</td>
+			</tr>
+		</table>
+		<h3>Delivery address</h3>
+		<div class="address">
+			Joe Bloggs<br/>
+			33 Potty Lane<br/>
+			Pottingham<br/>
+			PH34 2OJ<br/>
+		</div>
+		<p>To edit or cancel your order, follow <a href="about:blank">this link</a>.</p>
+		<p>Your order number, for safe keeping, is 43535925381.</p>
+		<p>We'll let you know when your items are on their way.</p>
+	</body>
+</html>

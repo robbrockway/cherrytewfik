@@ -1,0 +1,10 @@
+﻿{% include "header.html" %}
+<h2>Dear {{customer_name}},</h2>
+{% if is_refund %}
+<p>You have been refunded for the following items:</p>
+{% else %}
+<p>Your order has been cancelled. You will no longer be charged for the following items:</p>
+{% endif %}
+{% include "order_info.html" with show_total_balance=is_refund %}
+<p>Please do come back soon for more pottery.</p>
+{% include "footer.html" %}

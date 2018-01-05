@@ -1,0 +1,99 @@
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6400)
+entering extended mode
+(C:/Users/robbr_000/AppData/Local/jrx6uvc4.tex
+LaTeX2e <2017-04-15>
+Babel <3.12> and hyphenation patterns for 75 language(s) loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fontspec\fontspec.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\l3kernel\expl3.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\l3kernel\expl3-code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\l3kernel\l3xdvipdfmx.def"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\l3packages\xparse\xparse.sty")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fontspec\fontspec-xetex.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\tuenc.def"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fontspec\fontspec.cfg")))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xltxtra\xltxtra.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\realscripts\realscripts.sty")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\metalogo\metalogo.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics-def\xetex.def")))))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\multicol.sty")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pstricks\pstricks.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\iftex\iftex.sty")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\shellesc.sty")
+(C:\Users\robbr_000\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pstricks\pstricks.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\pst-xkey.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.tex"))))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pstricks\pst-fp.tex"
+`pst-fp' v0.05, 2010/01/17 (hv))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common.te
+x"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common-li
+sts.tex"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeysfiltered.c
+ode.tex"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgffor.code.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathcalc.code.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathutil.code.tex")
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathparser.code.te
+x")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.code.
+tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.basic
+.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.trigo
+nometric.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.rando
+m.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.compa
+rison.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.base.
+code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.round
+.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.misc.
+code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.integ
+erarithmetics.code.tex")))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfloat.code.tex"
+)))
+`PSTricks' v2.75  <2017/08/24> (tvz)
+
+(C:\Users\robbr_000\AppData\Roaming\MiKTeX\2.9\tex\xelatex\xetex-pstricks\pstri
+cks.con ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pstricks\xdvipdfmx.cfg"
+))
+(C:\Users\robbr_000\AppData\Roaming\MiKTeX\2.9\tex\xelatex\xetex-pstricks\pstri
+cks.con ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pstricks\xdvipdfmx.cfg"
+Using PSTricks configuration for XeTeX+xdvipdfmx
+))) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pstricks\pst-fp.tex"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\longtable.sty")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tabu\tabu.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\varwidth.sty"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\xelatex\xetexconfig\geometry.cfg"))
+No file jrx6uvc4.aux.
+*geometry* detected driver: pdftex
+(C:/Users/robbr_000/Documents/cherrytewfik/api/app/templates/logo.tex) [1]
+[2] (C:\Users\ROBBR_~1\AppData\Local\jrx6uvc4.aux) )
+Output written on C:\Users\ROBBR_~1\AppData\Local\jrx6uvc4.pdf (2 pages).
+Transcript written on C:\Users\ROBBR_~1\AppData\Local\jrx6uvc4.log.

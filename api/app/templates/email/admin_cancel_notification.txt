@@ -1,0 +1,3 @@
+Dear {{admin_first_name}},
+{{customer_name}} has cancelled an order, which consisted of these items:
+{% include "order_info.txt" with show_total_balance=False %}

@@ -1,0 +1,5 @@
+Dear {{user.first_name}} {{user.last_name}},
+
+You have asked to change your registered email address to {{new_address}}. If this is correct, go to the following address to confirm the change:
+
+{{activation_url}}

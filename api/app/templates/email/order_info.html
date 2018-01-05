@@ -1,0 +1,32 @@
+﻿<table style="margin: 25px 0px">
+	{% for piece in pieces %}
+	<tr>
+		<td style="padding: 10px 0px">
+			<img src="cid:{{piece.image_filename}}" alt="" style="width: 180px" />
+		</td>
+		<td style="padding: 10px 30px; font-size: 18px; text-align: right">
+			{{piece.name}}
+		</td>
+		<td style="padding: 10px 0px; text-align: right">
+			&pound;{{piece.price}}
+		</td>
+	</tr>
+	{% endfor %}
+	{% if show_total_balance is None or show_total_balance %}
+	<tr style="font-weight: bold">
+		<td style="padding: 10px 30px; font-size: 24px" colspan="2">
+			Total
+		</td>
+		<td style="padding: 10px 0px; text-align: right; font-size: 18px">
+			&pound;{{order.total_balance}}
+		</td>
+	</tr>
+	{% endif %}
+</table>
+<h3>Delivery address</h3>
+<div style="margin: 20px 0px 40px">
+	{{order.recipient_name}}<br/>
+	{% for line in address_lines %}
+	{{line}}<br/>
+	{% endfor %}
+</div>

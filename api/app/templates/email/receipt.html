@@ -1,0 +1,16 @@
+﻿{% include "header.html" %}
+<h2>Dear {{customer_name}},</h2>
+{% if is_new_order %}
+<p>Thank you for your order. You have bought these ceramics:</p>
+{% else %}
+<p>You have edited your order. Here are the ceramics you have now bought:</p>
+{% endif %}
+{% include "order_info.html" %}
+{% if is_new_order %}
+<p>To edit or cancel your order, follow <a href="{{order_url}}">this link</a>.</p>
+{% else %}
+<p>To cancel your order or edit it further, follow <a href="{{order_url}}">this link</a>.</p>
+{% endif %}
+<p>Your order number, for safe keeping, is {{order.id}}.</p>
+<p>We'll let you know when your items are on their way.</p>
+{% include "footer.html" %}

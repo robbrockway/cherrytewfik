@@ -1,0 +1,18 @@
+Dear {{customer_name}},
+{% if is_new_order %}
+Thank you for your order. You have bought these ceramics:
+{% else %}
+You have edited your order. Here are the ceramics you have now bought:
+{% endif %}
+{% include "order_info.txt" %}
+{% if is_new_order %}
+To edit or cancel your order, please go to: {{order_url}}
+{% else %}
+To cancel your order or edit it further, please go to: {{order_url}}
+{% endif %}
+Your order number, for safe keeping, is {{order.id}}.
+
+We'll let you know when your items are on their way.
+
+
+{{site_root}}/

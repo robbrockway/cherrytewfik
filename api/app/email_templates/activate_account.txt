@@ -1,0 +1,3 @@
+Welcome, {{user.first_name}} {{user.last_name}}.
+
+To activate your account, go to {{activation_url}}

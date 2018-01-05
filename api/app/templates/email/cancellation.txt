@@ -1,0 +1,12 @@
+Dear {{customer_name}},
+{% if is_refund %}
+You have been refunded for the following items:
+{% else %}
+Your order has been cancelled. You will no longer be charged for the following items:
+{% endif %}
+{% include "order_info.txt" with show_total_balance=is_refund %}
+
+Please do come back soon for more pottery.
+
+
+{{site_root}}/

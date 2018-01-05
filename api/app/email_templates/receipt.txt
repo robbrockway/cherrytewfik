@@ -1,0 +1,14 @@
+Dear {{customer_name}},
+
+Thank you for your order. You have bought these ceramics:
+
+{% include "order_info.txt" %}
+
+To edit or cancel your order, please go to: {{order_url}}
+
+Your order number, for safe keeping, is {{order.id}}.
+
+We'll let you know when your items are on their way.
+
+
+{{site_root}}/

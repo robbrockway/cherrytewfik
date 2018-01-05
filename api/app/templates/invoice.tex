@@ -1,0 +1,61 @@
+{% load app_tags %}
+\documentclass{article}
+\usepackage{fontspec, xltxtra, multicol, pstricks, graphicx, titlesec, longtable, tabu}
+\usepackage[a4paper, margin=2.5cm]{geometry}
+
+\setmainfont{Cabin}[Path={{template_dir}}/fonts/, UprightFont=*-Regular, BoldFont=*-Bold, ItalicFont=*-Italic]
+\graphicspath{ {{'{'}}{{template_dir}}/../../../images/pieces/360w/} }
+\setlength\parindent{0pt}
+\setlength\tabcolsep{0pt}
+\titlespacing*{\section}{0pt}{1cm}{0cm}
+
+\renewcommand{\arraystretch}{0}
+\newcommand{\rowspace}{\vspace{14pt}}
+\newcommand{\rowdone}{\\ \noalign{\rowspace} \hline \noalign{\rowspace}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}m{#1}}
+\definecolor{rule}{gray}{0.75}
+
+\title{Invoice for {{customer_name|escapetex}}{{'}'}}
+\date{{'{'}}{{date.padded_day}}-{{date.num_month}}-{{date.year}}{{'}'}}
+\author{Cherry Tewfik Ceramics}
+
+\begin{document}
+	\begin{flushright}
+		\input{{'{'}}{{template_dir}}/logo.tex}
+	\end{flushright}
+	\begin{multicols}{2}
+		{{order.recipient_name|escapetex}}
+		{% for line in address_lines %}
+			{{line|escapetex}}
+		{% endfor %}
+		\vfill\null
+		\columnbreak
+		\begin{flushright}
+			Cherry Tewfik Ceramics\\
+			Cherry's address\\
+			Line 3\\
+			Line 4\\
+			AB12 3CD
+		\end{flushright}
+	\end{multicols}
+	\begin{multicols}{2}
+		{{date.day}}\textsuperscript{{'{'}}{{date.ordinal}}{{'}'}} {{date.word_month}} {{date.year}}
+		\section*{Invoice}
+		\vfill\null
+		\columnbreak
+		\begin{flushright}
+			Order number: \textit{{'{'}}{{order.id}}{{'}'}}
+		\end{flushright}
+	\end{multicols}
+	\begin{longtabu}{m{5cm} X R{2cm}}
+		\taburulecolor{rule}
+		{% for piece in pieces %}
+			{% if piece.image_filename %}
+				\includegraphics[scale=0.3]{{'{'}}{{piece.image_filename}}{{'}'}}
+			{% endif %}
+			& {{piece.name|escapetex}}
+			& \textsterling{{piece.price}} \rowdone
+		{% endfor %}
+		\multicolumn{2}{R{13cm}}{\textbf{Total paid}} & \textbf{\textsterling{{total_balance}}{{'}'}} \\
+	\end{longtabu}
+\end{document}

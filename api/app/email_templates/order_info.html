@@ -1,0 +1,68 @@
+﻿<style>
+	table {
+		margin: 25px 0px;
+	}
+
+	td {
+		padding: 10px 0px;
+	}
+
+	td.name, td.price, td.total {
+		text-align: right;
+	}
+	
+	td.name, td.totalLabel {
+		padding: 10px 30px;
+		font-size: 18px;
+	}
+
+	td.totalLabel, td.total {
+		font-weight: bold;
+	}
+
+	td.totalLabel {
+		font-size: 24px;
+	}
+
+	td.total {
+		font-size: 18px;
+	}
+
+	td img {
+		width: 180px;
+	}
+
+	.address {
+		margin: 20px 0px 40px;
+	}
+</style>
+<table>
+	{% for piece in pieces %}
+	<tr>
+		<td>
+			<img src="cid:{{piece.image_filename}}" alt="" />
+		</td>
+		<td class="name">
+			{{piece.name}}
+		</td>
+		<td class="price">
+			&pound;{{piece.price}}
+		</td>
+	</tr>
+	{% endfor %}
+	<tr>
+		<td class="totalLabel" colspan="2">
+			Total
+		</td>
+		<td class="total">
+			&pound;{{order.total_balance}}
+		</td>
+	</tr>
+</table>
+<h3>Delivery address</h3>
+<div class="address">
+	{{order.recipient_name}}<br/>
+	{% for line in address_lines %}
+	{{line}}<br/>
+	{% endfor %}
+</div>
