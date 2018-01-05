@@ -1,7 +1,0 @@
-TODO for new Cherry Tewfik site
-
-ANGULAR CONCEPTS TO LEARN
-– ngrx/store
-– Unit testing, end-to-end testing
-	– MockConnection, MockBackend
-– Lazy loading of modules
