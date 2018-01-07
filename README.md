@@ -58,7 +58,7 @@ Working demo at http://ctdemo.robswebcraft.com/
 
 - Implement remaining API features in client app
   - Registration and editing of user accounts
-    - Use [DialogueService](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/dialogue/dialogue.service.ts) to display forms that hover over the main page
+    - Use [DialogueService](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/dialogue/dialogue.service.ts) to display forms and dialogue boxes that float over the main page
   - Basket and order management
     - Show basket in a [flyout](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/modules/main/flyout/flyout.component.ts)
     - New router endpoints for placing, editing and cancelling orders
