@@ -80,7 +80,7 @@ Working demo at http://ctdemo.robswebcraft.com/
       - No mouse hover, so press-hold can be used to make edit controls appear; normally this leads to right-click behaviour, which must be stopped
     - Get rid of dead space to the right of page, which can currently be scrolled into
     - [ScrollToTopOnNavigationDirective](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/scroll.to.top.on.navigation.directive.ts) ensures that the screen is scrolled correctly after navigating to a new view, but it could do with staying switched off when the app is initially loading, else the title banner and main menu aren't seen
-    - Brighten some colours. It looks a little bland and subdued on a phone screen, especially outdoors.
+    - Brighten some colours. Even with [current adjustments](https://github.com/robbrockway/cherrytewfik/blob/7cf2d94d8a7cdfeec4340b85d429189eb7fad4d2/front/src/styles/imports/screen-sizes.scss#L42-L57), it looks a little subdued and faint on a phone screen.
     - Test on iOS
 - Testing
   - Frontend could benefit greatly from some end-to-end tests. Components and models work well in isolation, but the modules that contain them are not covered by unit tests, and everything behaves a little unpredictably when first run in earnest.
