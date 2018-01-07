@@ -1,34 +1,34 @@
 # Cherry Tewfik Ceramics
-Online gallery and shop for ceramicist Cherry Tewfik, using Angular 2 and Django REST Framework
+Online gallery and shop for ceramicist Cherry Tewfik, using [Angular 2](http://angular.io/) and [Django REST Framework](http://www.django-rest-framework.org/)
 
 ## Current features
 
 ### Client
 - Pottery catalogue, with WYSIWYG editing
   - Elaborate system of ['field' components](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/modules/fields), including [dates](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/fields/editable/edit/types/year.month.edit.component.ts), [strings](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/fields/editable/edit/types/string.edit.component.ts), [prices](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/fields/editable/edit/types/price.edit.component.ts), [images](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/fields/editable/edit/types/image.edit.component.ts), and [related objects](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/fields/editable/edit/types/image.edit.component.ts)
-  - Reorderable lists, for listing categories and listing pieces within each category
-- Client-side object-relational mapper
-  - Converts data to/from JSON, for communication with server
-  - Capable of defining custom model and field types
-  - Keeps an up-to-date cache, remembering relationships between objects
-- Image ticker component, to give a slideshow effect
+  - [Reorderable lists](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/staff/editable-ordered-list/editable.ordered.list.component.ts), for [listing categories](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/staff/editable-ordered-list/editable.category.list.component.ts) and [listing pieces within each category](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/gallery/editable/editable.piece.list.component.ts)
+- Client-side [object-relational mapper](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/modules/main/models)
+  - Converts data [to/from JSON](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/models/field-descriptors/base.ts), for communication with server
+  - Capable of defining custom [model](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/models/model.ts) and [field](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/models/field-descriptors/base.ts) types
+  - Keeps an [up-to-date cache](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/models/model.service.ts), remembering relationships between objects
+- [Image ticker component](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/shared/image-ticker/image.ticker.component.ts), to give a slideshow effect
   - Avoids excessive repetition of the same images
-  - Two tickers on home page avoid showing the same image simultaneously
-- Zoomable image thumbnails, on mouse hover
-- Information about items, on mouse hover
+  - [Two tickers on home page](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/home-view/piece-ticker/piece.ticker.component.ts) avoid showing the [same image simultaneously](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/home-view/piece-ticker/piece.ticker.service.ts)
+- [Zoomable image thumbnails](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/fields/static/thumbnail.component.ts), on mouse hover
+- [Information about items](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/gallery/shared/static.piece.list.item.component.ts), on mouse hover
   - Positioned carefully, to stay on screen
-- Login/logout box
-  - Handles the full range of possible errors/rejections from server, displaying them in appropriate places
-  - Uses a general-purpose flyout component
-- Notification system displaying messages in top-right corner, currently used by reorderable lists
-- Comprehensive suite of unit tests, including a homemade class-based test system
+- [Login/logout box](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/login/login.component.ts)
+  - Handles the full range of possible errors/rejections from server, [displaying them in appropriate places](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/login/login.form.component.ts)
+  - Uses a general-purpose [flyout component](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/modules/main/flyout)
+- [Notification system](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/notification/notification.component.ts) displaying messages in top-right corner, currently used by reorderable lists
+- Comprehensive suite of unit tests, including a homemade [class-based test system](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/testing)
   - Abstracts away some of the routine parts of Angular testing:
-    - Creating test modules
-    - Declaring components
-    - Searching the DOM for elements and directives
+    - [Creating test modules](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/testing/test.with.module.ts)
+    - [Declaring components](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/testing/component.test.base.ts)
+    - [Searching the DOM](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/testing/utils.ts) for elements and directives
   - Tools for testing the ORM
-    - Base classes for testing data models and their associated injectable services
-    - Classes for datasets, storing values in their client-side format and their expected server-side conversions
+    - Base classes for testing [data models](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/models/model.test.base.ts) and their associated [injectable services](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/models/model.service.test.base.ts)
+    - Classes for [datasets](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/testing/data/datasets.ts), storing values in their client-side format and their expected server-side conversions
   
 ### Server
 - REST API that performs list, create, retrieve, update and destroy operations on the catalogue
