@@ -79,7 +79,7 @@ Working demo at http://ctdemo.robswebcraft.com/
     - Editing tools must work somewhat differently on touchscreen
       - No mouse hover, so press-hold can be used to make edit controls appear; normally this leads to right-click behaviour, which must be stopped
     - Get rid of dead space to the right of page, which can currently be scrolled into
-    - [ScrollToTopOnNavigationDirective](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/scroll.to.top.on.navigation.directive.ts) ensures that the screen is scrolled correctly after navigating to a new view, but it could do with being switched off when the app is initially loaded, else the title banner and main menu aren't seen
+    - [ScrollToTopOnNavigationDirective](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/scroll.to.top.on.navigation.directive.ts) ensures that the screen is scrolled correctly after navigating to a new view, but it could do with staying switched off when the app is initially loading, else the title banner and main menu aren't seen
     - Test on iOS
 - Angular compilation, modularity, and code splitting
   - Initial JavaScript download is huge (~1MB)! Fortunately the app uses a number of distinct [NgModule](https://angular.io/guide/ngmodule-faq)s, which can eventually be provided as separate JS files.
