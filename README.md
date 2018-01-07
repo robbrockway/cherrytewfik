@@ -79,10 +79,9 @@ Working demo at http://ctdemo.robswebcraft.com/
     - Editing tools must work somewhat differently on touchscreen
       - No mouse hover, so press-hold can be used to make edit controls appear; normally this leads to right-click behaviour, which must be stopped
     - Get rid of dead space to the right of page, which can currently be scrolled into
-    - [ScrollToTopOnNavigationDirective](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/scroll.to.top.on.navigation.directive.ts) ensures the screen is scrolled correctly after navigating to a new view, but it could do with being switched off when the app is initially loaded, else the title banner and main menu aren't seen
+    - [ScrollToTopOnNavigationDirective](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/scroll.to.top.on.navigation.directive.ts) ensures that the screen is scrolled correctly after navigating to a new view, but it could do with being switched off when the app is initially loaded, else the title banner and main menu aren't seen
     - Test on iOS
 - Angular compilation, modularity, and code splitting
   - Initial JavaScript download is huge (~1MB)! Fortunately the app uses a number of distinct [NgModule](https://angular.io/guide/ngmodule-faq)s, which can eventually be provided as separate JS files.
   - Staff-only modules ([StaffModule](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/modules/staff), [EditableFieldsModule](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/modules/fields/editable), [EditableGalleryModule](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/modules/fields/editable)) and their components should be loaded dynamically using [NgModuleFactoryLoader](https://pr18487-aedf0aa.ngbuilds.io/api/core/NgModuleFactoryLoader) when a staff user logs in, rather than always loading when the app boots.
   - Problems with Angular's lazy module loader are making a production build impossible right now. Once these are solved, disabling debug mode and using the [ahead-of-time compiler](https://angular.io/guide/aot-compiler) will aid performance and cut download sizes further.
-  
