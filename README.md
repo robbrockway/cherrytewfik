@@ -54,7 +54,7 @@ Working demo at http://ctdemo.robswebcraft.com/
 - Again, a large suite of [unit tests](https://github.com/robbrockway/cherrytewfik/tree/master/api/app/tests), with its own class hierarchy mirroring the app's one
 
 
-# To-do list
+## To-do list
 
 - Implement remaining API features in client app
   - Registration and editing of user accounts
@@ -89,7 +89,7 @@ Working demo at http://ctdemo.robswebcraft.com/
   - Staff-only modules ([StaffModule](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/modules/staff), [EditableFieldsModule](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/modules/fields/editable), [EditableGalleryModule](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/modules/fields/editable)) and their components should be loaded dynamically using [NgModuleFactoryLoader](https://pr18487-aedf0aa.ngbuilds.io/api/core/NgModuleFactoryLoader) when a staff user logs in, rather than always loading when the app boots.
   - Problems with Angular's lazy module loader are making a production build impossible right now. Once these are solved, disabling debug mode and using the [ahead-of-time compiler](https://angular.io/guide/aot-compiler) will aid performance and cut download sizes further.
 
-# Thoughts for future projects
+## Thoughts for future projects
 
 - Consider using an full-stack framework like [Meteor](https://www.meteor.com/). This time around, some features (e.g. data models) essentially had to be coded twice: once in Python for server, once in TypeScript for client. Using the same code on both sides would save much time and effort.
 - Server-side page rendering (e.g. with [Angular Universal](https://github.com/angular/universal)) would aid search engine visibility and improve support for older browsers.
