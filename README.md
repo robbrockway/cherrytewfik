@@ -23,6 +23,7 @@ Working demo at http://ctdemo.robswebcraft.com/
   - Handles the full range of possible errors/rejections from server, [displaying them in appropriate places](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/login/login.form.component.ts)
   - Uses a general-purpose [flyout component](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/modules/main/flyout)
 - [Notification system](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/notification/notification.component.ts) displaying messages in top-right corner, currently used by reorderable lists
+- [&lsquo;Sticky&rsquo; left-hand navigation bar](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/sticky.nav.bar.directive.ts), with `fixed` position by default but movable one if bar becomes taller than window
 - Comprehensive suite of unit tests, including a homemade [class-based test system](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/testing)
   - Abstracts away some of the routine parts of Angular testing:
     - [Creating test modules](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/testing/test.with.module.ts)
@@ -49,4 +50,36 @@ Working demo at http://ctdemo.robswebcraft.com/
     - PDF invoice, [rendered](https://github.com/robbrockway/cherrytewfik/blob/82abcb9bd925dde61deb38610207757002820642/api/app/views/invoice.py#L23-L181) using [LaTeX](https://www.latex-project.org/) and based on [Django templates](https://github.com/robbrockway/cherrytewfik/blob/master/api/app/templates/invoice.tex), for printing and sending with order ([see example](https://github.com/robbrockway/cherrytewfik/blob/master/api/app/templates/invoice_mockup.pdf))
     - [Payments](https://github.com/robbrockway/cherrytewfik/blob/82abcb9bd925dde61deb38610207757002820642/api/app/views/order.py#L77-L342) using [Braintree API](https://developers.braintreepayments.com/)
       - Payments are updated when [order is edited](https://github.com/robbrockway/cherrytewfik/blob/82abcb9bd925dde61deb38610207757002820642/api/app/views/order.py#L346-L554)
+- [Comments](https://github.com/robbrockway/cherrytewfik/blob/master/api/app/views/comment.py) on pieces or categories from the catalogue, postable by users
 - Again, a large suite of [unit tests](https://github.com/robbrockway/cherrytewfik/tree/master/api/app/tests), with its own class hierarchy mirroring the app's one
+
+
+# To-do list
+
+- Implement remaining API features in client app
+  - Registration and editing of user accounts
+    - Use [DialogueService](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/dialogue/dialogue.service.ts) to display forms that hover over the main page
+  - Basket and order management
+    - Show basket in a [flyout](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/modules/main/flyout/flyout.component.ts)
+    - New router endpoints for placing, editing and cancelling orders
+      - Take and send payment information using Braintree's [hosted fields](https://developers.braintreepayments.com/guides/hosted-fields/overview/javascript/v2)
+    - Router endpoint for merchant to view all current orders and mark them when dispatched, or for a user to view their order history
+  - User comments
+    - Display piece/category comments on the appropriate pages, with a form for posting further comments
+    - Display general, undirected comments in a [flyout](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/modules/main/flyout/flyout.component.ts) on the navigation bar
+    - Make comments deletable by poster, and all deletable by staff
+- Browser compatibility
+  - Currently runs well in Chrome 63 and Firefox 57
+  - Mostly works in IE11
+    - Unfortunate, though not catastrophic, streaky horizontal lines in left-hand category list when scrolling
+    - Image thumbnails are displaying at very low resolution, due to lack of support for [`srcset`](https://www.w3.org/TR/html-srcset/)
+      - Give a larger version of the image as `src`; modern browsers can opt for a smaller one if need be
+  - Test in Safari!
+  - Further testing on mobile
+    - Editing tools must work somewhat differently on touchscreen
+      - No mouse hover, so press-hold can be used to make edit controls appear; normally this leads to right-click behaviour, which must be stopped
+    - Get rid of dead space to the right of page, which can currently be scrolled into
+    - [ScrollToTopOnNavigationDirective](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/scroll.to.top.on.navigation.directive.ts) ensures the screen is scrolled correctly after navigating to a new view, but it could do with being switched off when the app is initially loaded, else the title banner and main menu aren't seen
+    - Test on iOS
+- Angular compilation, modularity, and code splitting
+  
