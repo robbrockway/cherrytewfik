@@ -69,7 +69,7 @@ Working demo at http://ctdemo.robswebcraft.com/
     - Display general, undirected comments in a [flyout](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/modules/main/flyout/flyout.component.ts) on the navigation bar
     - Make comments deletable by poster, and all deletable by staff
 - Testing
-  - Frontend could benefit greatly from some end-to-end tests. Components and models work well in isolation, but the modules that contain them are not covered by unit tests, and everything behaves a little unpredictably when first run in earnest.
+  - Frontend could benefit greatly from some end-to-end tests. Components and models work well in isolation, but the modules that contain them are not covered by unit tests, and everything behaves a little unpredictably when first combined.
 - Browser compatibility
   - Currently runs well in Chrome 63 and Firefox 57
   - Mostly works in IE11
