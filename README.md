@@ -63,7 +63,7 @@ Working demo at http://ctdemo.robswebcraft.com/
     - Show basket in a [flyout](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/modules/main/flyout/flyout.component.ts)
     - New router endpoints for placing, editing and cancelling orders
       - Take and send payment information using Braintree's [Hosted Fields](https://developers.braintreepayments.com/guides/hosted-fields/overview/javascript/v2)
-    - Router endpoint for merchant to view all current orders and mark them when dispatched, or for a user to view their order history
+    - Router endpoint for merchant to view all current orders and mark them when dispatched, or for a user to view their own order history
   - User comments
     - Display piece/category comments on the appropriate pages, with a form for posting further comments
     - Display general, undirected comments in a [flyout](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/modules/main/flyout/flyout.component.ts) on the navigation bar
