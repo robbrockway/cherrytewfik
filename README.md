@@ -24,7 +24,7 @@ Working demo at http://ctdemo.robswebcraft.com/
   - Uses a general-purpose [flyout component](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/modules/main/flyout)
 - [Notification system](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/notification/notification.component.ts) displaying messages in top-right corner, currently used by reorderable lists
 - [&lsquo;Sticky&rsquo; left-hand navigation bar](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/sticky.nav.bar.directive.ts), with `fixed` position by default but movable one if bar becomes taller than window
-- Comprehensive suite of unit tests, including a homemade [class-based test system](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/testing)
+- Comprehensive suite of unit tests, including a homemade [class-based test system](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/testing) and over 1000 cases
   - Abstracts away some of the routine parts of Angular testing:
     - [Creating test modules](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/testing/test.with.module.ts)
     - [Declaring components](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/testing/component.test.base.ts)
