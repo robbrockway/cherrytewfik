@@ -1,6 +1,8 @@
 # Cherry Tewfik Ceramics
 Online gallery and shop for ceramicist Cherry Tewfik, using [Angular 2](http://angular.io/) and [Django REST Framework](http://www.django-rest-framework.org/)
 
+Working demo at (http://ctdemo.robswebcraft.com/)
+
 ## Current features
 
 ### Client
