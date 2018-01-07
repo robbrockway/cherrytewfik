@@ -10,7 +10,7 @@ Online gallery and shop for ceramicist Cherry Tewfik, using [Angular 2](http://a
 - Client-side [object-relational mapper](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/modules/main/models)
   - Converts data [to/from JSON](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/models/field-descriptors/base.ts), for communication with server
   - Capable of defining custom [model](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/models/model.ts) and [field](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/models/field-descriptors/base.ts) types
-  - Keeps an [up-to-date cache](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/models/model.service.ts), remembering relationships between objects
+  - Keeps an [up-to-date cache](https://github.com/robbrockway/cherrytewfik/blob/2c7f4683c7d25082c3be84f5c12550dd42d6eb84/front/src/modules/main/models/model.ts#L190-L286), remembering relationships between objects
 - [Image ticker component](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/shared/image-ticker/image.ticker.component.ts), to give a slideshow effect
   - Avoids excessive repetition of the same images
   - [Two tickers on home page](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/home-view/piece-ticker/piece.ticker.component.ts) avoid showing the [same image simultaneously](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/home-view/piece-ticker/piece.ticker.service.ts)
@@ -25,10 +25,13 @@ Online gallery and shop for ceramicist Cherry Tewfik, using [Angular 2](http://a
   - Abstracts away some of the routine parts of Angular testing:
     - [Creating test modules](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/testing/test.with.module.ts)
     - [Declaring components](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/testing/component.test.base.ts)
-    - [Searching the DOM](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/testing/utils.ts) for elements and directives
+    - [Searching the DOM](https://github.com/robbrockway/cherrytewfik/blob/2c7f4683c7d25082c3be84f5c12550dd42d6eb84/front/src/testing/utils.ts#L37-L298) for elements and directives
   - Tools for testing the ORM
     - Base classes for testing [data models](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/models/model.test.base.ts) and their associated [injectable services](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/models/model.service.test.base.ts)
     - Classes for [datasets](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/testing/data/datasets.ts), storing values in their client-side format and their expected server-side conversions
+- [SASS stylesheets](https://github.com/robbrockway/cherrytewfik/tree/2c7f4683c7d25082c3be84f5c12550dd42d6eb84/front/src/styles)
+  - [Mixins](https://github.com/robbrockway/cherrytewfik/blob/2c7f4683c7d25082c3be84f5c12550dd42d6eb84/front/src/styles/imports/screen-sizes.scss) for responsive layout
+  
   
 ### Server
 - [REST API](https://github.com/robbrockway/cherrytewfik/blob/master/api/django_config/urls.py) that performs list, create, retrieve, update and destroy operations on the catalogue
