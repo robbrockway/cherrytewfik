@@ -5,7 +5,7 @@ Online gallery and shop for ceramicist Cherry Tewfik, using Angular 2 and Django
 
 ### Client
 - Pottery catalogue, with WYSIWYG editing
-  - Elaborate system of 'field' components, including dates, strings, prices, images, and related objects
+  - Elaborate system of ['field' components](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/modules/fields), including [dates](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/fields/editable/edit/types/year.month.edit.component.ts), [strings](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/fields/editable/edit/types/string.edit.component.ts), [prices](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/fields/editable/edit/types/price.edit.component.ts), [images](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/fields/editable/edit/types/image.edit.component.ts), and [related objects](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/fields/editable/edit/types/image.edit.component.ts)
   - Reorderable lists, for listing categories and listing pieces within each category
 - Client-side object-relational mapper
   - Converts data to/from JSON, for communication with server
