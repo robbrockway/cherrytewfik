@@ -68,6 +68,8 @@ Working demo at http://ctdemo.robswebcraft.com/
     - Display piece/category comments on the appropriate pages, with a form for posting further comments
     - Display general, undirected comments in a [flyout](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/modules/main/flyout/flyout.component.ts) on the navigation bar
     - Make comments deletable by poster, and all deletable by staff
+- Testing
+  - Frontend could benefit greatly from some end-to-end tests. Components and models work well in isolation, but the modules that contain them are not covered by unit tests, and everything behaves a little unpredictably when first run in earnest.
 - Browser compatibility
   - Currently runs well in Chrome 63 and Firefox 57
   - Mostly works in IE11
@@ -82,8 +84,6 @@ Working demo at http://ctdemo.robswebcraft.com/
     - [ScrollToTopOnNavigationDirective](https://github.com/robbrockway/cherrytewfik/blob/master/front/src/modules/main/scroll.to.top.on.navigation.directive.ts) ensures that the screen is scrolled correctly after navigating to a new view, but it could do with staying switched off when the app is initially loading, else the title banner and main menu aren't seen
     - Brighten some colours. Even with [current adjustments](https://github.com/robbrockway/cherrytewfik/blob/7cf2d94d8a7cdfeec4340b85d429189eb7fad4d2/front/src/styles/imports/screen-sizes.scss#L42-L57), it looks a little subdued and faint on a phone screen.
     - Test on iOS
-- Testing
-  - Frontend could benefit greatly from some end-to-end tests. Components and models work well in isolation, but the modules that contain them are not covered by unit tests, and everything behaves a little unpredictably when first run in earnest.
 - Angular compilation, modularity, and code splitting
   - Initial JavaScript download is huge (~1MB)! Fortunately the app uses a number of distinct [NgModule](https://angular.io/guide/ngmodule-faq)s, which can eventually be provided as separate JS files.
   - Staff-only modules ([StaffModule](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/modules/staff), [EditableFieldsModule](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/modules/fields/editable), [EditableGalleryModule](https://github.com/robbrockway/cherrytewfik/tree/master/front/src/modules/fields/editable)) and their components should be loaded dynamically using [NgModuleFactoryLoader](https://pr18487-aedf0aa.ngbuilds.io/api/core/NgModuleFactoryLoader) when a staff user logs in, rather than always loading when the app boots.
