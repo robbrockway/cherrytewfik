@@ -26,5 +26,20 @@ Online gallery and shop for ceramicist Cherry Tewfik, using Angular 2 and Django
     - Creating test modules
     - Declaring components
     - Searching the DOM for elements and directives
-  - Also provides base classes for testing the ORM, including data models and their associated injectable services
-    
+  - Tools for testing the ORM
+    - Base classes for testing data models and their associated injectable services
+    - Classes for datasets, storing values in their client-side format and their expected server-side conversions
+  
+### Server
+- REST API that performs list, create, retrieve, update and destroy operations on the catalogue
+- Django models, serializers and views for all tasks
+- Email templates, using Django's own template renderer
+- Other features, soon to be implemented on client:
+  - User registration, with an emailed activation key
+  - Password resetter and email address changer, also with activation keys
+  - Ordering system
+    - Basket containing products, linked to a registered user, or to a guest via session ID
+    - Order model, passing through &lsquo;pending&rsquo;, &lsquo;open&rsquo; and &lsquo;dispatched&rsquo; phases
+    - Confirmation emails to customer and merchant
+    - PDF invoice, rendered using LaTeX and based on Django templates, for printing and sending with order (see example)
+- Again, a large suite of unit tests, with its own class hierarchy mirroring the app's one
